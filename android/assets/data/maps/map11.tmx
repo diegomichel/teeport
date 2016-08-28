@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><map height="30" orientation="orthogonal" tileheight="64" tilewidth="64" version="1.0" width="60"><properties><property name="blended tiles" value="16,30,31,32,33,35,36,38,39,41,42,43,44,45,48,49,51,52,54,55,57,58,59,60,61,62,63,64,65,67,68,69,70,71,73,74,75,76,77,78,79,81,83,84,85,86,87,89,90,91,92,93,94,95,96,97,99,100,101,102,103,104,105,106,107,108,109,110,111,112,113,115,116,117,118,119,120,121,122,123,124,125,126,127,128,142,143,144,145,146,147,148,149,150,151,152,153,154,155,156,157,158,159,160,161,162,163,164,165,166,167,168,169,172,173,174,175,176,177,178,179,180,181,182,183,184,185,186,187,188,189,190,191,192,193,194,195,196,197,198,199,200,201,202,203,204,205,206,207,208,209,210,211,212,213,214,215,216,217,218,219,220,221,222,223,224,227,228,229,230,231,232,233,234,235,236,237,238,239,240,243,244,245,246,247,248,249,250,251,252,253,254,255,256"/></properties>
+ <tileset firstgid="1" name="tilemapinkscape" tileheight="64" tilewidth="64">
+  <image height="1024" source="tilemapinkscape.png" trans="000000" width="1024"/>
+ </tileset>
+ <layer height="30" name="Capa de patrones 2" width="60">
+  <data compression="zlib" encoding="base64">
+   eJztw0ENAAAMA6H717/fCRkkrJqqqqqqqqr64gGcEE1Z
+  </data>
+ </layer>
+ <layer height="30" name="Capa de Patrones 1" width="60">
+  <data compression="zlib" encoding="base64">
+   eJzt1EcRgEAUwND1b4digGKAYoBigHImqNiZ/TnkEAOvSinV1FBLVeHfUU8DjQF+opkWWgP8RjsddAb4i2566A3wuf3QK73SK73SK73Sq/I/tx96pVd6pVd6pVd6Vf7n9kOv9Eqv9Eqv9Or/D9Mw1nA=
+  </data>
+ </layer>
+ <layer height="30" name="Capa de patrones 3" width="60">
+  <data compression="zlib" encoding="base64">
+   eJztmU1uAjEMhX2maqg4RzfAjjN0xVX6g+QttD1A/6RepdygbMqSF9AIGpTEyThAUp70ZCRMPF/iRBnREHGPiP6BvxoYkVeIKf6FSVEjorHmeLZ627XlnDViNDwO70GN3PPs0qjj3F+j364Qb+BbeEKbOdx87pObN/c8n0oeXs5VM7Z3NHvN08+c+jx38D38AD/CUys/tnck+dI5cfF2eZ4ZPIef4Gf45TCfI8cP5kvHVOL9U+sVfoPf4Q/408qPPZMk+dIxNXjbWqanvhEXsB0XdLozf18avK1MX/8gLmE7Luk8znxlXjbr6VrjnGe+VNq8Zj1da1wjr2//SniPdH9WqdGur2f/smAMlWdxSZN3QNu7qssDQZ3cPa/Jq6Gu7wuh/XBuvF0V2g8V8rLv+9p4Q/uhNt6QLrxlKPVeUipv6r2kYF5O+V2pvKn3klJ5U3XhrVuGt6Hd/0m1G6zjNTPD5ok=
+  </data>
+ </layer>
+ <layer height="30" name="Capa de patrones 4" width="60">
+  <data compression="zlib" encoding="base64">
+   eJztzlENgDAQBcHzLw2KgQJe+lT0CJlJ9n+rAOB/jnSmka7mlx1mutOT3uYXAAAAAODbFjg3Bp0=
+  </data>
+ </layer>
+ <objectgroup height="30" name="Cajas" width="60">
+  <object height="64" name="ET_BOX" width="64" x="1216" y="576"/>
+  <object height="64" name="ET_BOX" width="64" x="1312" y="544"/>
+  <object height="64" name="ET_BOX" width="64" x="1376" y="544"/>
+  <object height="64" name="ET_BOX" width="64" x="1440" y="544"/>
+  <object height="64" name="ET_BOX" width="64" x="1504" y="544"/>
+  <object height="64" name="ET_BOX" width="64" x="1568" y="544"/>
+  <object height="64" name="ET_BOX" width="64" x="1312" y="608"/>
+  <object height="64" name="ET_BOX" width="64" x="1376" y="608"/>
+  <object height="64" name="ET_BOX" width="64" x="1440" y="608"/>
+  <object height="64" name="ET_BOX" width="64" x="1504" y="608"/>
+  <object height="64" name="ET_BOX" width="64" x="1568" y="608"/>
+  <object height="64" name="ET_BOX" width="64" x="1248" y="672"/>
+  <object height="64" name="ET_BOX" width="64" x="1312" y="672"/>
+  <object height="64" name="ET_BOX" width="64" x="1376" y="672"/>
+  <object height="64" name="ET_BOX" width="64" x="1440" y="672"/>
+  <object height="64" name="ET_BOX" width="64" x="1504" y="672"/>
+  <object height="64" name="ET_BOX" width="64" x="1568" y="672"/>
+  <object height="64" name="ET_BOX" width="64" x="1248" y="736"/>
+  <object height="64" name="ET_BOX" width="64" x="1312" y="736"/>
+  <object height="64" name="ET_BOX" width="64" x="1376" y="736"/>
+  <object height="64" name="ET_BOX" width="64" x="1440" y="736"/>
+  <object height="64" name="ET_BOX" width="64" x="1504" y="736"/>
+  <object height="64" name="ET_BOX" width="64" x="1568" y="736"/>
+  <object height="64" name="ET_BOX" width="64" x="1248" y="800"/>
+  <object height="64" name="ET_BOX" width="64" x="1312" y="800"/>
+  <object height="64" name="ET_BOX" width="64" x="1440" y="800"/>
+  <object height="64" name="ET_BOX" width="64" x="1376" y="800"/>
+  <object height="64" name="ET_BOX" width="64" x="1504" y="800"/>
+  <object height="64" name="ET_BOX" width="64" x="1568" y="800"/>
+  <object height="64" name="ET_BOX" width="64" x="1248" y="864"/>
+  <object height="64" name="ET_BOX" width="64" x="1312" y="864"/>
+  <object height="64" name="ET_BOX" width="64" x="1376" y="864"/>
+  <object height="64" name="ET_BOX" width="64" x="1440" y="864"/>
+  <object height="64" name="ET_BOX" width="64" x="1504" y="864"/>
+  <object height="64" name="ET_BOX" width="64" x="1568" y="864"/>
+  <object height="64" name="ET_BOX" width="64" x="672" y="608"/>
+  <object height="64" name="ET_BOX" width="64" x="672" y="800"/>
+  <object height="64" name="ET_BOX" width="64" x="672" y="928"/>
+  <object height="64" name="ET_BOX" width="64" x="672" y="1056"/>
+  <object height="64" name="ET_BOX" width="64" x="2208" y="288"/>
+  <object height="64" name="ET_BOX" width="64" x="2208" y="416"/>
+  <object height="64" name="ET_BOX" width="64" x="2208" y="544"/>
+  <object height="64" name="ET_BOX" width="64" x="2208" y="672"/>
+  <object height="64" name="ET_BOX" width="64" x="1056" y="1760"/>
+  <object height="64" name="ET_BOX" width="64" x="1120" y="1632"/>
+  <object height="64" name="ET_BOX" width="64" x="1120" y="1504"/>
+  <object height="64" name="ET_BOX" width="64" x="1120" y="1376"/>
+  <object height="64" name="ET_BOX" width="64" x="1120" y="1248"/>
+  <object height="64" name="ET_BOX" width="64" x="1120" y="1056"/>
+ </objectgroup>
+ <objectgroup height="30" name="Otras" width="60">
+  <object height="64" name="ET_PRINCESS" width="64" x="3712" y="128"/>
+  <object height="64" name="ET_PLAYER" width="64" x="448" y="1664"/>
+ </objectgroup>
+ <layer height="30" name="Capa de patrones 5" width="60">
+  <data compression="zlib" encoding="base64">
+   eJzt10EKgCAURdG31NaQk5bTUlpahTQJFQI1vL4D4lAvDj5K0jbJUtwXTeJq3d2bFqRjjUulFRrdtQa/L5t72dzL8J4lz8yg9ua4l829bO5lG6k3N1O/yPWm/n49/3n3+S3OG+l9a3Avm3vZ3MvmXrYZe/++Q28nlU5lJQ==
+  </data>
+ </layer>
+ <objectgroup height="30" name="paredes" width="60">
+  <object height="64" name="ET_WALL_NOPORTAL" width="3840" x="0" y="0"/>
+  <object height="1856" name="ET_WALL_NOPORTAL" width="64" x="3776" y="64"/>
+  <object height="1856" name="ET_WALL_NOPORTAL" width="64" x="0" y="64"/>
+  <object height="256" width="64" x="320" y="192"/>
+  <object height="256" width="64" x="1024" y="384"/>
+  <object height="448" width="64" x="1152" y="576"/>
+  <object height="448" width="64" x="1664" y="576"/>
+  <object height="64" width="448" x="1216" y="960"/>
+  <object height="256" width="64" x="1792" y="320"/>
+  <object height="192" width="64" x="2240" y="64"/>
+  <object height="256" width="64" x="2560" y="320"/>
+  <object height="256" width="64" x="2240" y="832"/>
+  <object height="256" width="64" x="2880" y="1408"/>
+  <object height="192" width="64" x="3136" y="384"/>
+  <object height="256" width="64" x="3264" y="1024"/>
+  <object height="64" width="320" x="2688" y="1088"/>
+  <object height="64" width="384" x="320" y="1152"/>
+  <object height="64" width="704" x="640" y="192"/>
+  <object height="64" width="320" x="3392" y="576"/>
+  <object height="64" width="128" x="2368" y="1152"/>
+  <object height="64" width="448" x="3328" y="192"/>
+  <object height="64" width="64" x="3264" y="192"/>
+  <object height="64" width="3712" x="64" y="1856"/>
+  <object height="64" name="ET_SPIKES" width="960" x="64" y="64"/>
+ </objectgroup>
+</map>
