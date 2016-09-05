@@ -110,14 +110,12 @@ public class TileMap {
             float sideSize = Float.parseFloat(object.getProperties().get("width").toString());
             objectPosition = new Vector2(Float.parseFloat(object.getProperties().get("x").toString()), Float.parseFloat(object.getProperties().get("y").toString()) + sideSize);
             objectPosition.add(sideSize / 2, -sideSize / 2);
-            objectPosition = this.tileToWorld(objectPosition);
             GameScreen.princess = new Princess(objectPosition);
             return;
         } else if (object.getName().equals("ET_PLAYER")) {
             float sideSize = Float.parseFloat(object.getProperties().get("width").toString());
             objectPosition = new Vector2(Float.parseFloat(object.getProperties().get("x").toString()), Float.parseFloat(object.getProperties().get("y").toString()) + sideSize);
             objectPosition.add(sideSize / 2, -sideSize / 2);
-            objectPosition = this.tileToWorld(objectPosition);
             GameScreen.player = new Player(objectPosition);
             return;
         } else if (object.getName().equals("ET_BOX")) {
