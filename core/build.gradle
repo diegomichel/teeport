@@ -5,6 +5,9 @@ sourceCompatibility = 1.6
 
 sourceSets.main.java.srcDirs = [ "src/" ]
 
+dependencies {
+    compile group: 'org.apache.commons', name: 'commons-lang3', version: '3.4'
+}
 
 eclipse.project {
     name = appName + "-core"
