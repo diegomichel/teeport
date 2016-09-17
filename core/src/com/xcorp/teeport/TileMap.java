@@ -122,7 +122,6 @@ public class TileMap {
             float sideSize = Float.parseFloat(object.getProperties().get("width").toString());
             objectPosition = new Vector2(Float.parseFloat(object.getProperties().get("x").toString()), Float.parseFloat(object.getProperties().get("y").toString()) + sideSize);
             objectPosition.add(sideSize / 2, -sideSize / 2);
-            objectPosition = this.tileToWorld(objectPosition);
             Utils.vectorInBox2dCoordinates(objectPosition);
             new Box(objectPosition);
             return;
@@ -135,15 +134,11 @@ public class TileMap {
             figure.setType(BodyType.StaticBody);
             figure.setShapeForm(ShapeForm.BOX);
             figure.setSize(new Vector2(Float.parseFloat(object.getProperties().get("width").toString()), Float.parseFloat(object.getProperties().get("height").toString())));
-            objectPosition = new Vector2(Float.parseFloat(object.getProperties().get("x").toString()), Float.parseFloat(object.getProperties().get("y").toString()) + Float.parseFloat(object.getProperties().get("height").toString())); // MMM
-            // WTF
-            // LOL
-            objectPosition = this.tileToWorld(objectPosition);
+            objectPosition = new Vector2(Float.parseFloat(object.getProperties().get("x").toString()), Float.parseFloat(object.getProperties().get("y").toString()));
             figure.setPos(objectPosition.cpy());
         } else if (object.getName().equals("ET_SPIKES")) {
             Vector2 objectSize = new Vector2(Float.parseFloat(object.getProperties().get("width").toString()), Float.parseFloat(object.getProperties().get("height").toString()));
             objectPosition = new Vector2(Float.parseFloat(object.getProperties().get("x").toString()), Float.parseFloat(object.getProperties().get("y").toString()) + Float.parseFloat(object.getProperties().get("height").toString()));
-            objectPosition = this.tileToWorld(objectPosition);
             objectPosition.add(Float.parseFloat(object.getProperties().get("width").toString()) / 2, Float.parseFloat(object.getProperties().get("height").toString()) / 2);
             Utils.vectorInBox2dCoordinates(objectPosition);
 
