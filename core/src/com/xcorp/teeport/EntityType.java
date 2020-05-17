@@ -1,0 +1,5 @@
+package com.xcorp.teeport;
+
+public enum EntityType {
+    ET_PLAYER, ET_MISSILE, ET_BOX, ET_PORTAL, ET_WALL, ET_WALL_NOPORTAL, ET_INFO, ET_WEAPON, ET_MISC, ET_NONE, ET_MAP, ET_SPIKES, ET_PRINCESS, ET_SHIT, ET_GHOST
+}
