@@ -1,7 +1,7 @@
 package com.xcorp.teeport;
 
 public class Settings {
-    public static final float WORLD_LIMIT = 8196*16;
+    public static final float WORLD_LIMIT = 8196 * 16;
 
     //Screen settings
     public static final int SCREEN_WIDTH = 1280;
@@ -43,7 +43,7 @@ public class Settings {
      */
     public static final boolean CONTROLS_STICKY_AIM = true;
     public static final boolean CONTROLS_VISUAL_CONTROLS = true;
-    public static final int		CONTROLS_MILLISECONDS_TO_RELEASE = 120;
+    public static final int CONTROLS_MILLISECONDS_TO_RELEASE = 120;
 
     /*
     Debug

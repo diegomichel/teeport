@@ -1,15 +1,8 @@
 package com.xcorp.teeport.ui;
 
-import com.badlogic.gdx.assets.AssetDescriptor;
-import com.xcorp.teeport.utils.MusicManager;
-
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Map.Entry;
-
-import com.xcorp.teeport.*;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Screen;
+import com.badlogic.gdx.assets.AssetDescriptor;
 import com.badlogic.gdx.assets.AssetErrorListener;
 import com.badlogic.gdx.assets.AssetManager;
 import com.badlogic.gdx.audio.Music;
@@ -19,6 +12,14 @@ import com.badlogic.gdx.graphics.OrthographicCamera;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
+import com.xcorp.teeport.Messages;
+import com.xcorp.teeport.Settings;
+import com.xcorp.teeport.Teeport;
+import com.xcorp.teeport.utils.MusicManager;
+
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Map.Entry;
 
 public class AssetsScreen implements Screen, AssetErrorListener {
     public static AssetManager manager;
@@ -53,15 +54,10 @@ public class AssetsScreen implements Screen, AssetErrorListener {
         musicManager = new MusicManager();
         batch = new SpriteBatch();
         batch.setProjectionMatrix(AssetsScreen.camera.combined);
-        // Atlas atlas = new
-        // TextureAtlas(Gdx.files.internal("skins/pack.atlas"));
 
         font16 = new BitmapFont(Gdx.files.internal("fonts/font16.fnt"), false);
         font32 = new BitmapFont(Gdx.files.internal("fonts/font32.fnt"), false);
         font64 = new BitmapFont(Gdx.files.internal("fonts/font64.fnt"), false);
-
-        //font.setColor(Color.DARK_GRAY);
-        //font.setScale(0.5f);
 
         manager = new AssetManager();
 

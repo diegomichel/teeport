@@ -1,7 +1,5 @@
 package com.xcorp.teeport;
 
-
-import com.badlogic.gdx.math.Vector2;
 import com.badlogic.gdx.physics.box2d.Body;
 
 public class Entity {
@@ -15,10 +13,7 @@ public class Entity {
     public boolean inLove = false;
 
     Portal portal;
-    Body teleportThis = null;
-    Vector2 teleportVelocity = null;
     float teleportTime;
-    float portalEscapeFactor = 1;
 
     float highSpeed;
     float highSpeedTime;

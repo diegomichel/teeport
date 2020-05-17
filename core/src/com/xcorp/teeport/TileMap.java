@@ -1,18 +1,19 @@
 package com.xcorp.teeport;
 
 
-import com.badlogic.gdx.maps.MapLayer;
-import com.badlogic.gdx.maps.MapObject;
-import com.badlogic.gdx.maps.tiled.renderers.OrthogonalTiledMapRenderer;
-import com.xcorp.teeport.ui.*;
-import com.xcorp.teeport.utils.Utils;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.files.FileHandle;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.OrthographicCamera;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
-import com.badlogic.gdx.maps.tiled.*;
+import com.badlogic.gdx.maps.MapLayer;
+import com.badlogic.gdx.maps.MapObject;
+import com.badlogic.gdx.maps.tiled.AtlasTmxMapLoader;
+import com.badlogic.gdx.maps.tiled.TiledMap;
+import com.badlogic.gdx.maps.tiled.TiledMapRenderer;
+import com.badlogic.gdx.maps.tiled.TmxMapLoader;
+import com.badlogic.gdx.maps.tiled.renderers.OrthogonalTiledMapRenderer;
 import com.badlogic.gdx.math.Vector2;
 import com.badlogic.gdx.math.Vector3;
 import com.badlogic.gdx.physics.box2d.Body;
@@ -23,6 +24,8 @@ import com.badlogic.gdx.physics.box2d.FixtureDef;
 import com.badlogic.gdx.physics.box2d.PolygonShape;
 import com.badlogic.gdx.utils.Array;
 import com.badlogic.gdx.utils.TimeUtils;
+import com.xcorp.teeport.ui.AssetsScreen;
+import com.xcorp.teeport.utils.Utils;
 
 public class TileMap {
     SpriteBatch spriteBatch;
@@ -103,7 +106,7 @@ public class TileMap {
         FixtureDef fixtureDef = new FixtureDef();
 
         if (object.getName() == null) {
-            object.setName( "ET_WALL");
+            object.setName("ET_WALL");
         }
 
         if (object.getName().equals("ET_PRINCESS")) {
@@ -291,8 +294,9 @@ public class TileMap {
             }
         }
     }
+
     public Vector2 tileToWorld(Vector2 pos) {
-        pos.y = -pos.y + Float.parseFloat( TileMap.map.getProperties().get("height").toString()) * Float.parseFloat( TileMap.map.getProperties().get("tileheight").toString());
+        pos.y = -pos.y + Float.parseFloat(TileMap.map.getProperties().get("height").toString()) * Float.parseFloat(TileMap.map.getProperties().get("tileheight").toString());
         return pos;
     }
 }

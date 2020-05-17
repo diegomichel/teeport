@@ -1,9 +1,9 @@
 package com.xcorp.teeport.utils;
 
-import com.xcorp.teeport.TileMap;
 import com.badlogic.gdx.graphics.OrthographicCamera;
 import com.badlogic.gdx.math.Vector2;
 import com.badlogic.gdx.physics.box2d.Body;
+import com.xcorp.teeport.TileMap;
 
 public class CameraUtils {
     public static void followBody(OrthographicCamera camera, Body body) {
@@ -17,10 +17,10 @@ public class CameraUtils {
         Utils.vectorInWorldCoordinates(player);
 
         float cameraMinX = cameraHalfWidth;
-        float cameraMaxX = Float.parseFloat( TileMap.map.getProperties().get("width").toString()) * Float.parseFloat( TileMap.map.getProperties().get("tilewidth").toString())
+        float cameraMaxX = Float.parseFloat(TileMap.map.getProperties().get("width").toString()) * Float.parseFloat(TileMap.map.getProperties().get("tilewidth").toString())
                 - cameraHalfWidth;
         float cameraMinY = cameraHalfHeight;
-        float cameraMaxY = Float.parseFloat( TileMap.map.getProperties().get("height").toString()) * Float.parseFloat( TileMap.map.getProperties().get("tileheight").toString())
+        float cameraMaxY = Float.parseFloat(TileMap.map.getProperties().get("height").toString()) * Float.parseFloat(TileMap.map.getProperties().get("tileheight").toString())
                 - cameraHalfHeight;
 
         if (player.y > camera.position.y - camera.viewportHeight / 2

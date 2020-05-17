@@ -1,7 +1,6 @@
 package com.xcorp.teeport.utils;
 
 import com.badlogic.gdx.audio.Music;
-
 import com.xcorp.teeport.ui.AssetsScreen;
 
 public class MusicManager {

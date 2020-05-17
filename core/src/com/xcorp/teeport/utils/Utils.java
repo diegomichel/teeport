@@ -1,11 +1,12 @@
 package com.xcorp.teeport.utils;
 
-import com.xcorp.teeport.*;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.Sprite;
 import com.badlogic.gdx.math.Vector2;
-
+import com.xcorp.teeport.GameScreen;
+import com.xcorp.teeport.Line;
+import com.xcorp.teeport.Settings;
 import com.xcorp.teeport.controllers.Controls;
 
 // TODO: Auto-generated Javadoc

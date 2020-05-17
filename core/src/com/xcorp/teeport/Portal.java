@@ -1,11 +1,6 @@
 package com.xcorp.teeport;
 
 
-import java.util.Iterator;
-
-import com.xcorp.teeport.ui.AssetsScreen;
-
-import com.xcorp.teeport.utils.Utils;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.audio.Sound;
 import com.badlogic.gdx.graphics.Texture;
@@ -13,11 +8,15 @@ import com.badlogic.gdx.graphics.g2d.Sprite;
 import com.badlogic.gdx.math.Vector2;
 import com.badlogic.gdx.physics.box2d.Body;
 import com.badlogic.gdx.physics.box2d.BodyDef;
+import com.badlogic.gdx.physics.box2d.BodyDef.BodyType;
 import com.badlogic.gdx.physics.box2d.Fixture;
 import com.badlogic.gdx.physics.box2d.PolygonShape;
 import com.badlogic.gdx.physics.box2d.RayCastCallback;
-import com.badlogic.gdx.physics.box2d.BodyDef.BodyType;
 import com.badlogic.gdx.utils.TimeUtils;
+import com.xcorp.teeport.ui.AssetsScreen;
+import com.xcorp.teeport.utils.Utils;
+
+import java.util.Iterator;
 
 public class Portal extends Brain {
     boolean blue = false;
@@ -97,8 +96,8 @@ public class Portal extends Brain {
         center = this.normal.cpy();
         Utils.vectorInBox2dCoordinates(center);
         /*
-		 * Move the center of the portal, aka move the portal towards the normal
-		 */
+         * Move the center of the portal, aka move the portal towards the normal
+         */
         center.x *= Settings.PORTAL_WIDTH / 8 + 5;
         center.y *= Settings.PORTAL_WIDTH / 8 + 5;
 

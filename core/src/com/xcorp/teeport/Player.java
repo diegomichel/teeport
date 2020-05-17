@@ -1,9 +1,6 @@
 package com.xcorp.teeport;
 
 
-import com.xcorp.teeport.Effects.LittleShits;
-import com.xcorp.teeport.controllers.Controls;
-import com.xcorp.teeport.utils.Utils;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Input.Keys;
 import com.badlogic.gdx.audio.Sound;
@@ -21,10 +18,12 @@ import com.badlogic.gdx.physics.box2d.FixtureDef;
 import com.badlogic.gdx.physics.box2d.PolygonShape;
 import com.badlogic.gdx.utils.Array;
 import com.badlogic.gdx.utils.TimeUtils;
+import com.xcorp.teeport.Effects.LittleShits;
+import com.xcorp.teeport.controllers.Controls;
+import com.xcorp.teeport.ui.AssetsScreen;
+import com.xcorp.teeport.utils.Utils;
 
 import java.util.Iterator;
-
-import com.xcorp.teeport.ui.AssetsScreen;
 
 public class Player extends Brain {
     public float health = Settings.PLAYER_HEALTH;
@@ -239,9 +238,9 @@ public class Player extends Brain {
             body.setLinearVelocity(playerVelocity);
         }
 
-		/*
+        /*
          * Contacts events that happened in the last frame
-		 */
+         */
         Iterator<Entity> ContactIterator = contacts.iterator();
         while (ContactIterator.hasNext()) {
             Entity other = ContactIterator.next();

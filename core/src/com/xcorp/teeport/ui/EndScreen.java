@@ -1,20 +1,17 @@
 package com.xcorp.teeport.ui;
 
 
-import com.xcorp.teeport.*;
 import com.badlogic.gdx.Gdx;
-import com.badlogic.gdx.Preferences;
 import com.badlogic.gdx.Screen;
-import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.OrthographicCamera;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.math.Vector2;
 import com.badlogic.gdx.math.Vector3;
-import com.badlogic.gdx.utils.Array;
-
-import com.xcorp.teeport.controllers.Controls;
+import com.xcorp.teeport.Particles;
+import com.xcorp.teeport.Settings;
+import com.xcorp.teeport.Teeport;
 
 public class EndScreen implements Screen {
     private SpriteBatch spriteBatch;
@@ -39,24 +36,6 @@ public class EndScreen implements Screen {
         Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
         Gdx.gl.glClearColor(0.9137f, 0.949f, 0.9764f, 1);
         spriteBatch.begin();
-
-
-//		AssetsScreen.font64.draw(this.spriteBatch, "Time: " + (int) (GameScreen.currentTime - GameScreen.startTime) / 1000 + " s", 50,
-//				Gdx.graphics.getHeight() - 10);
-//
-//		AssetsScreen.font64.draw(this.spriteBatch, "Teleportations: " + Player.teleportations, 70, Gdx.graphics.getHeight() - 110);
-//
-//		AssetsScreen.font64.draw(this.spriteBatch, "Spawned Teleporters: " + Weapon.shots, 90, Gdx.graphics.getHeight() - 220);
-//
-//
-//		AssetsScreen.font32.setColor(Color.ORANGE);
-//		AssetsScreen.font32.draw(this.spriteBatch, "Best: " + time + " s", 70,
-//				Gdx.graphics.getHeight() - 70);
-//
-//		AssetsScreen.font32.draw(this.spriteBatch, "Best: " + teleports, 90, Gdx.graphics.getHeight() - 170);
-//
-//		AssetsScreen.font32.draw(this.spriteBatch, "Best: " + spawns, 110, Gdx.graphics.getHeight() - 280);
-//
 
         spriteBatch.draw(splsh, 0, 0);
 

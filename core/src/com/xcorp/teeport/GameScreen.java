@@ -1,10 +1,5 @@
 package com.xcorp.teeport;
 
-import java.util.Iterator;
-
-import com.xcorp.teeport.ui.AssetsScreen;
-
-import com.xcorp.teeport.utils.CameraUtils;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Screen;
 import com.badlogic.gdx.graphics.GL30;
@@ -16,6 +11,10 @@ import com.badlogic.gdx.physics.box2d.ContactListener;
 import com.badlogic.gdx.physics.box2d.World;
 import com.badlogic.gdx.utils.Array;
 import com.badlogic.gdx.utils.TimeUtils;
+import com.xcorp.teeport.ui.AssetsScreen;
+import com.xcorp.teeport.utils.CameraUtils;
+
+import java.util.Iterator;
 
 public class GameScreen implements Screen {
 

@@ -1,17 +1,16 @@
 package com.xcorp.teeport.controllers;
 
 
-import com.xcorp.teeport.ui.AssetsScreen;
-
-import com.xcorp.teeport.GameScreen;
-import com.xcorp.teeport.Settings;
-import com.xcorp.teeport.utils.Utils;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.Sprite;
 import com.badlogic.gdx.math.Vector2;
 import com.badlogic.gdx.math.Vector3;
 import com.badlogic.gdx.utils.TimeUtils;
+import com.xcorp.teeport.GameScreen;
+import com.xcorp.teeport.Settings;
+import com.xcorp.teeport.ui.AssetsScreen;
+import com.xcorp.teeport.utils.Utils;
 
 public class Joystick {
     public Vector2 center;

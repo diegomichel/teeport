@@ -1,20 +1,14 @@
 package com.xcorp.teeport;
-
-
-import com.xcorp.teeport.ui.AssetsScreen;
-
-import com.xcorp.teeport.Effects.NoPortal;
-import com.xcorp.teeport.Effects.Shit;
-
-import com.xcorp.teeport.utils.Utils;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.Sprite;
 import com.badlogic.gdx.math.Vector2;
 import com.badlogic.gdx.physics.box2d.Fixture;
 import com.badlogic.gdx.physics.box2d.RayCastCallback;
 import com.badlogic.gdx.utils.TimeUtils;
-
+import com.xcorp.teeport.Effects.NoPortal;
 import com.xcorp.teeport.controllers.Controls;
+import com.xcorp.teeport.ui.AssetsScreen;
+import com.xcorp.teeport.utils.Utils;
 
 public class Weapon implements RayCastCallback {
     public enum RC_Check {
@@ -283,8 +277,8 @@ public class Weapon implements RayCastCallback {
             return;
         }
         /*
-		 * What if there is a portal where i want to put my new portal?
-		 */
+         * What if there is a portal where i want to put my new portal?
+         */
         if (this.player.portal[0] != null && this.player.portal[1] != null) {
             if (this.player.portal[0].birthDate > this.player.portal[1].birthDate) {
                 if (Portal.hitPortal(this.player.portal[0],

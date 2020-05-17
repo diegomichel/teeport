@@ -1,15 +1,15 @@
 package com.xcorp.teeport.Effects;
 
 
-import com.xcorp.teeport.Brain;
-import com.xcorp.teeport.Entity;
-import com.xcorp.teeport.EntityType;
-import com.xcorp.teeport.GameScreen;
 import com.badlogic.gdx.math.Vector2;
 import com.badlogic.gdx.physics.box2d.Body;
 import com.badlogic.gdx.physics.box2d.BodyDef;
 import com.badlogic.gdx.physics.box2d.BodyDef.BodyType;
 import com.badlogic.gdx.utils.TimeUtils;
+import com.xcorp.teeport.Brain;
+import com.xcorp.teeport.Entity;
+import com.xcorp.teeport.EntityType;
+import com.xcorp.teeport.GameScreen;
 
 public class LittleShits extends Brain {
     BodyDef bodyDef;

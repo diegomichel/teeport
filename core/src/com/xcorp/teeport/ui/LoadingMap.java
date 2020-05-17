@@ -1,10 +1,6 @@
 package com.xcorp.teeport.ui;
 
 
-import com.xcorp.teeport.GameScreen;
-import com.xcorp.teeport.Player;
-import com.xcorp.teeport.Teeport;
-import com.xcorp.teeport.Weapon;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Preferences;
 import com.badlogic.gdx.Screen;
@@ -12,6 +8,10 @@ import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
+import com.xcorp.teeport.GameScreen;
+import com.xcorp.teeport.Player;
+import com.xcorp.teeport.Teeport;
+import com.xcorp.teeport.Weapon;
 
 public class LoadingMap implements Screen {
     private SpriteBatch spriteBatch;
