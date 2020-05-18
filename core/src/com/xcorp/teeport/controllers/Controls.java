@@ -14,29 +14,16 @@ import com.xcorp.teeport.ui.AssetsScreen;
 
 
 public class Controls implements InputProcessor {
-    Texture joystickATexture;
-    Texture joystickBTexture;
-    Texture joystickCursor;
-
-    float xRel = 0;
-    float yRel = 0;
-
     public static int joystickAPointer = -1;
-    public static int joystickBPointer = -1;
     public static Vector2 joystickAPosition;
     public static Vector2 joystickBPosition;
     public static Vector2 mousestickPosition;
     public static float lastMouseX = 0;
     public static float lastMouseY = 0;
-    public static int lastMoVector2useY = 0;
 
     public static boolean useJoystickToAim = false;
     public static boolean dragged = false;
     public static Vector2 target;
-
-    public Vector2 joystickACenter;
-    public Vector2 joystickBCenter;
-    public Vector2 joystickBCursorPosition;
 
     public Joystick joystickA;
     public Joystick joystickB;
@@ -63,20 +50,16 @@ public class Controls implements InputProcessor {
         if (keycode == Keys.BACK || keycode == Keys.ESCAPE) {
             GameScreen.game.setScreen((Screen) GameScreen.game.mainMenu);
         }
-        // TODO Auto-generated method stub
         return false;
     }
 
     @Override
     public boolean keyTyped(char character) {
-
-        // TODO Auto-generated method stub
         return false;
     }
 
     @Override
     public boolean keyUp(int keycode) {
-
         return false;
     }
 
@@ -101,7 +84,6 @@ public class Controls implements InputProcessor {
 
     @Override
     public boolean scrolled(int amount) {
-        // TODO Auto-generated method stub
         return false;
     }
 

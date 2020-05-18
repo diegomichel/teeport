@@ -1,4 +1,5 @@
 package com.xcorp.teeport;
+
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.Sprite;
 import com.badlogic.gdx.math.Vector2;
@@ -11,44 +12,25 @@ import com.xcorp.teeport.ui.AssetsScreen;
 import com.xcorp.teeport.utils.Utils;
 
 public class Weapon implements RayCastCallback {
-    public enum RC_Check {
-        RC_MUZZLE, RC_WALL, RC_GHOST
-    }
-
-    private long lastShotTime;
-    private float fireRate;
-    Texture weaponTexture = null;
-    Texture portalBluePrint = null;
-
-    Texture portalRedPrint = null;
-    Texture trajectoryPoint = null;
-    Texture trajectoryPointBlue = null;
-
-    Texture trajectoryPointOrange = null;
-    Sprite weaponSprite = null;
-
-    Sprite ghostPortalSprite = null;
-    Vector2 weaponOffset = new Vector2(32, 32);
-    Player player = null;
-
-    boolean canFire = true;
-    boolean rayCastCheckMuzzle = false;
-    boolean rayCastGetWall = false;
-
-    public Vector2 aimTarget;
-    ;
-
-    static Portal bluePortal = null;
-    static Portal orangePortal = null;
-
-    RC_Check rayCastOption;
-
-    Vector2 trEndPos = null;
-    Vector2 trNormal = null;
-
     public static Entity target;
     public static int shots;
-
+    public Vector2 aimTarget;
+    Texture weaponTexture;
+    Texture portalBluePrint;
+    Texture portalRedPrint;
+    Texture trajectoryPoint;
+    Texture trajectoryPointBlue;
+    Texture trajectoryPointOrange;
+    Sprite weaponSprite = null;
+    Sprite ghostPortalSprite = null;
+    Vector2 weaponOffset = new Vector2(32, 32);
+    Player player;
+    boolean canFire = true;
+    RC_Check rayCastOption;
+    Vector2 trEndPos = null;
+    Vector2 trNormal = null;
+    private long lastShotTime;
+    private float fireRate;
     public Weapon(float fireRate, Player player) {
         this.weaponTexture = AssetsScreen.getTexture("gunTexture");
 
@@ -234,13 +216,13 @@ public class Weapon implements RayCastCallback {
         this.canFire = true;
 
         Vector2 p1 = this.player.body.getPosition();
-        Vector2 p2 = null;
+        Vector2 p2;
         Vector2 vectorPath;
         Vector2 normal;
 
         p2 = Utils.getMouseInFixedBox2dCoordenates();
 
-        float r = Utils.distancePP(p1, p2);
+        float r;
         float angle = Utils.anglePP(p1, p2);
 
         if (Controls.useJoystickToAim) {
@@ -327,13 +309,6 @@ public class Weapon implements RayCastCallback {
 
     }
 
-    //
-    // private boolean canFire(Vector2 p1, Vector2 muzzle) {
-    // this.rayCastOption = RC_Check.RC_MUZZLE;
-    // Teeport.world.rayCast(this, p1, muzzle);
-    // return this.canFire;
-    // }
-
     @Override
     public float reportRayFixture(Fixture fixture, Vector2 point,
                                   Vector2 normal, float fraction) {
@@ -369,5 +344,9 @@ public class Weapon implements RayCastCallback {
         }
 
         return -1;
+    }
+
+    public enum RC_Check {
+        RC_MUZZLE, RC_WALL, RC_GHOST
     }
 }

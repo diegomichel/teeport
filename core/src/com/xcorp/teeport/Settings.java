@@ -1,6 +1,7 @@
 package com.xcorp.teeport;
 
 public class Settings {
+    public static final int INITIAL_MAP = 1;
     public static final float WORLD_LIMIT = 8196 * 16;
 
     //Screen settings

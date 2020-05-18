@@ -34,13 +34,17 @@ public class GameScreen implements Screen {
     private ContactListener contacto = new Contacto();
 
 
-    static Array<Entity> teleportBuffer = new Array<Entity>();
+    static Array<Entity> teleportBuffer;
+
+    static {
+        teleportBuffer = new Array<Entity>();
+    }
 
     TileMap tileMap;
 
     public static Teeport game;
 
-    public static int nextMapToLoad = 1;
+    public static int nextMapToLoad = Settings.INITIAL_MAP;
 
     public static long startTime;
     public static long currentTime;
@@ -134,7 +138,11 @@ public class GameScreen implements Screen {
 
         GameScreen.world.step(1 / 60f, 6, 2);
 
-        // Removing dead bodies
+        RemoveDeadBodies(bodies);
+    }
+
+    private void RemoveDeadBodies(Array bodies) {
+        Iterator<Body> bi;
         GameScreen.world.getBodies(bodies);
         bi = bodies.iterator();
         while (bi.hasNext()) {

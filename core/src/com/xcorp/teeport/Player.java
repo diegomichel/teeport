@@ -1,6 +1,7 @@
 package com.xcorp.teeport;
 
 
+import com.badlogic.gdx.Application;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Input.Keys;
 import com.badlogic.gdx.audio.Sound;
@@ -28,11 +29,7 @@ import java.util.Iterator;
 public class Player extends Brain {
     public float health = Settings.PLAYER_HEALTH;
     public float radius = Settings.PLAYER_RADIUS;
-    String name = "Unnamed Player";
     public Body body;
-    protected Body hitBody = null;
-    ShapeRenderer shapeRenderer;
-
     Texture playerTexture = null;
     Texture eyesTexture = null;
 
@@ -41,11 +38,6 @@ public class Player extends Brain {
     PolygonShape polygonShape;
     CircleShape circleShape;
     Fixture footSensorFixture;
-
-    float lastShotTime = 0;
-
-    public float highSpeed = 0;
-    public float highSpeedTime = 0;
 
     static boolean abortShot = false;
 
@@ -177,8 +169,8 @@ public class Player extends Brain {
         if (dead)
             return;
         weapon.draw(body.getPosition());
-        // if(Gdx.app.getType() == ApplicationType.Android)
-        controller.draw();
+        //if(Gdx.app.getType() == Application.ApplicationType.Android)
+            controller.draw();
 
         Vector2 playerPos = GameScreen.player.body.getPosition().cpy();
         Utils.vectorInWorldCoordinates(playerPos);

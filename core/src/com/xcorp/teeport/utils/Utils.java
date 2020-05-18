@@ -74,9 +74,9 @@ public class Utils {
      * @return the mouse in fixed box2d coordenates
      */
     public static Vector2 getMouseInFixedBox2dCoordenates() {
-        Vector2 mouseCoordenates = Utils.getMouseInFixedWorldCoordinates();
-        Utils.vectorInBox2dCoordinates(mouseCoordenates);
-        return mouseCoordenates;
+        Vector2 mouseCoordinates = Utils.getMouseInFixedWorldCoordinates();
+        Utils.vectorInBox2dCoordinates(mouseCoordinates);
+        return mouseCoordinates;
     }
 
     /**
@@ -90,8 +90,7 @@ public class Utils {
             }
         }
 
-        Vector2 mouseCoordenates = new Vector2(Controls.lastMouseX, Controls.lastMouseY);
-        return mouseCoordenates;
+        return new Vector2(Controls.lastMouseX, Controls.lastMouseY);
     }
 
     public static Vector2 intersectionPoint(float x1, float y1, float x2,
