@@ -1,13 +1,11 @@
 package com.xcorp.teeport;
 
 
-import com.badlogic.gdx.Application;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Input.Keys;
 import com.badlogic.gdx.audio.Sound;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.Sprite;
-import com.badlogic.gdx.graphics.glutils.ShapeRenderer;
 import com.badlogic.gdx.math.Vector2;
 import com.badlogic.gdx.physics.box2d.Body;
 import com.badlogic.gdx.physics.box2d.BodyDef;
@@ -124,10 +122,13 @@ public class Player extends Brain {
         Vector2 velocity = this.body.getLinearVelocity();
         Vector2 impulse = new Vector2(0, 0);
 
-        if (Gdx.input.isKeyPressed(Keys.J)) {
-            //GameScreen.effects.corazones(this.body.getPosition().cpy().mul(Settings.BOX_TO_WORLD).add(0, 35));
-            //new Box(this.body.getPosition());
-            this.loadNextLevel();
+        if(Settings.DEVELOPMENT_MODE) {
+            if (Gdx.input.isKeyPressed(Keys.J)) {
+                new Box(this.body.getPosition());
+            }
+            if (Gdx.input.isKeyPressed(Keys.P)) {
+                this.loadNextLevel();
+            }
         }
 
         if (Gdx.input.isKeyPressed(Keys.A) || (controller.joystickB.active == true && controller.joystickB.getDirectionVector().x < -10)) {

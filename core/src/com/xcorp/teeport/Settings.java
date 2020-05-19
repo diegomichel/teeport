@@ -2,7 +2,6 @@ package com.xcorp.teeport;
 
 public class Settings {
     public static final int INITIAL_MAP = 1;
-    public static final float WORLD_LIMIT = 8196 * 16;
 
     //Screen settings
     public static final int SCREEN_WIDTH = 1280;
@@ -21,16 +20,9 @@ public class Settings {
 
     //Times are in Milliseconds
     public static final float PORTAL_GUN_RATE = 1000;
-    public static final float PORTAL_GUN_SPEED = 10f;
-    public static final float PORTAL_MISSILE_RADIUS = 1.0f;
-    public static final float PORTAL_MISSILE_SPEED = 1.0f;
 
     public static final float PORTAL_WIDTH = 50;
     public static final float PORTAL_HEIGHT = 128;
-
-    public static final float DEFAULT_FRICTION = 1;
-    public static final float DEFAULT_DENSITY = 1;
-    public static final float DEFAULT_RESTITUTION = 0.2f;
 
     public static final float MAX_OBJECT_SIZE_TO_TELEPORT = 64;
 
@@ -38,11 +30,9 @@ public class Settings {
 
     public static final long INTERMISSION_TIME = 5000;
 
-
     /*
     Special controls
      */
-    public static final boolean CONTROLS_STICKY_AIM = true;
     public static final boolean CONTROLS_VISUAL_CONTROLS = true;
     public static final int CONTROLS_MILLISECONDS_TO_RELEASE = 120;
 
@@ -50,4 +40,5 @@ public class Settings {
     Debug
      */
     public static final boolean DEBUG_DRAW_BBOX = false;
+    public static boolean DEVELOPMENT_MODE = true;
 }

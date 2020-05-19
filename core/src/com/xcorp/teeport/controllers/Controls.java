@@ -48,7 +48,7 @@ public class Controls implements InputProcessor {
     @Override
     public boolean keyDown(int keycode) {
         if (keycode == Keys.BACK || keycode == Keys.ESCAPE) {
-            GameScreen.game.setScreen((Screen) GameScreen.game.mainMenu);
+            GameScreen.game.setScreen(GameScreen.game.mainMenu);
         }
         return false;
     }
