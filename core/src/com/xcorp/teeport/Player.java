@@ -148,11 +148,7 @@ public class Player extends Brain {
                 jumpSound.play();
             }
         }
-        // this.body.setLinearVelocity(velocity);
         this.body.applyForceToCenter(impulse, true);
-        // if (Gdx.input.isTouched()) {
-        // Teeport.effects.muzzleEffectDraw(Teeport.player.body.getPosition().cpy().mul(Settings.BOX_TO_WORLD));
-        // }
     }
 
     public boolean playerTouchingGround() {
