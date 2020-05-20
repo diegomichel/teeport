@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" width="20" height="13" tilewidth="64" tileheight="64">
+ <tileset firstgid="1" name="tilemapinkscape" tilewidth="64" tileheight="64">
+  <image source="tilemapinkscape.png" trans="000000" width="1024" height="1024"/>
+ </tileset>
+ <layer name="fondo" width="20" height="13">
+  <data encoding="base64" compression="zlib">
+   eJzjYmBg4BrFo3gUj2IgBgC6zAop
+  </data>
+ </layer>
+ <layer name="Capa de Patrones 1" width="20" height="13">
+  <data encoding="base64" compression="zlib">
+   eJy1ks0NwyAMRr8NGKAHpmjX4Ehzwgt0j4zRS/dgtH6WqUQo+WlFkJ5iE/NkZCLwvAN5BNG+4ukk+UauANbgf2it6+DNpb0Jc5A8McbO0tqZ51pcx6f5SN9U+R4kMQ8FxvlXX92H+ujBpRBO8nmrlRbuyz++rXWWz9s95Ijvhf4brN9f60llnmu+MpMFbtunSDKPBIul6u9rJp95RLv3EOiSN5PfgcM=
+  </data>
+ </layer>
+ <objectgroup name="Capa de Objetos 1" width="20" height="13">
+  <object name="ET_PRINCESS" x="1152" y="448" width="64" height="64"/>
+  <object name="ET_PLAYER" x="64" y="640" width="64" height="64"/>
+  <object x="0" y="0" width="1216" height="64"/>
+  <object x="0" y="64" width="64" height="768"/>
+  <object x="64" y="768" width="1216" height="64"/>
+  <object x="1216" y="0" width="64" height="768"/>
+  <object name="ET_WALL_NOPORTAL" x="64" y="64" width="128" height="576"/>
+  <object name="ET_WALL_NOPORTAL" x="192" y="64" width="576" height="64"/>
+  <object name="ET_WALL_NOPORTAL" x="768" y="64" width="448" height="384"/>
+  <object name="ET_WALL_NOPORTAL" x="832" y="576" width="384" height="192"/>
+  <object x="448" y="256" width="256" height="512"/>
+  <object x="320" y="640" width="128" height="128"/>
+  <object x="192" y="128" width="64" height="192"/>
+ </objectgroup>
+ <layer name="noportalz" width="20" height="13">
+  <data encoding="base64" compression="zlib">
+   eJxjYKA+qGdgWADEByqBuAKCGbDhSqjafCwYpB9mXj4EH8C0CROA1NZgwfmj5hFlXj1EbQI6BoonkGMeMYDa5tVDcAIJ6vGmP1IBtjihxH/Y4oQU/5ECAIb5QMU=
+  </data>
+ </layer>
+</map>

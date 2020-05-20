@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" width="30" height="13" tilewidth="64" tileheight="64">
+ <tileset firstgid="1" name="tilemapinkscape" tilewidth="64" tileheight="64">
+  <image source="tilemapinkscape.png" trans="000000" width="1024" height="1024"/>
+ </tileset>
+ <layer name="Capa de patrones 2" width="30" height="13">
+  <data encoding="base64" compression="zlib">
+   eJzjYmBg4BrFo3gUj+JRPIqhGACSEg89
+  </data>
+ </layer>
+ <layer name="Capa de Patrones 1" width="30" height="13">
+  <data encoding="base64" compression="zlib">
+   eJwLZ2BYEMHAwEBHfCAciIH0gv1AGh1nAdUgY2xqiMUMaABoZwLIXnRxagJPLGIweyOBNCH9+ynAuOyNIMLeSEickB2nIOwJMQfZ3gWE7KUW2A+xExbOdLN3KQNp6aqaAowMbpBoLyXpyh9oBwzHQ+KaaHuBehikqYD9h4i98RA9CZTieGh6BpaVKHmMHhhoZwIALIWhFQ==
+  </data>
+ </layer>
+ <objectgroup name="Capa de Objetos 1" width="30" height="13">
+  <object name="ET_PLAYER" x="128" y="704" width="64" height="64"/>
+  <object name="ET_PRINCESS" x="1600" y="192" width="64" height="64"/>
+  <object x="0" y="0" width="1920" height="64"/>
+  <object x="1856" y="64" width="64" height="768"/>
+  <object x="64" y="768" width="1792" height="64"/>
+  <object x="0" y="64" width="64" height="768"/>
+  <object x="64" y="192" width="64" height="256"/>
+  <object name="ET_SPIKES" x="64" y="64" width="320" height="64"/>
+  <object name="ET_SPIKES" x="640" y="64" width="960" height="64"/>
+  <object name="ET_SPIKES" x="640" y="192" width="960" height="64"/>
+  <object name="ET_SPIKES" x="640" y="512" width="960" height="64"/>
+  <object name="ET_SPIKES" x="1792" y="320" width="64" height="64"/>
+  <object x="1536" y="256" width="192" height="64"/>
+  <object x="1792" y="256" width="64" height="64"/>
+  <object name="ET_WALL_NOPORTAL" x="640" y="576" width="1216" height="192"/>
+  <object name="ET_WALL_NOPORTAL" x="640" y="256" width="896" height="64"/>
+  <object x="1600" y="512" width="256" height="64"/>
+ </objectgroup>
+ <layer name="aaa" width="30" height="13">
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFo4CBoZKB4UAFBDOQi0fBKBgFwwMAAH1TCXo=
+  </data>
+ </layer>
+</map>

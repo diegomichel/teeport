@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" width="30" height="14" tilewidth="64" tileheight="64">
+ <tileset firstgid="1" name="tilemapinkscape" tilewidth="64" tileheight="64">
+  <image source="tilemapinkscape.png" trans="000000" width="1024" height="1024"/>
+ </tileset>
+ <layer name="Capa de Patrones 1" width="30" height="14">
+  <data encoding="base64" compression="zlib">
+   eJzjYmBg4BrFo3gUj+JRPIoHGAMA/7sQaQ==
+  </data>
+ </layer>
+ <layer name="Capa de patrones 2" width="30" height="14">
+  <data encoding="base64" compression="zlib">
+   eJztlEEKwyAQRf89eqNm4dIMWZh1T+VRPFq/TGztVGmgiVCo8BiHcXgTkXggzgAGkjxhjFfmLUTr6UivaMzfGtFZ00ls3rXnPWsVb2B0hDHVdenMtFR846UTF+LevbHVZ+cs+R7C9qasN5gz1nnTcy9zlnwPruN15oz1SuN+RnhnvYu/94e8QfMcH/uSW6/oO0ddr3s+kXuy0+P5vx4Fnesdr5OnAQ==
+  </data>
+ </layer>
+ <objectgroup name="Capa de Objetos 1" width="30" height="14">
+  <object name="ET_WALL_NOPORTAL" x="1088" y="320" width="768" height="512"/>
+  <object name="ET_WALL_NOPORTAL" x="1856" y="0" width="64" height="896"/>
+  <object name="ET_WALL_NOPORTAL" x="448" y="64" width="1408" height="64"/>
+  <object name="ET_WALL_NOPORTAL" x="0" y="0" width="1856" height="64"/>
+  <object name="ET_WALL_NOPORTAL" x="448" y="256" width="64" height="128"/>
+  <object name="ET_WALL_NOPORTAL" x="832" y="320" width="192" height="512"/>
+  <object x="0" y="832" width="1856" height="64"/>
+  <object x="768" y="448" width="64" height="384"/>
+  <object x="256" y="384" width="256" height="448"/>
+  <object x="64" y="256" width="192" height="576"/>
+  <object x="0" y="64" width="64" height="768"/>
+  <object name="ET_PLAYER" x="64" y="192" width="64" height="64"/>
+  <object name="ET_PRINCESS" x="1792" y="256" width="64" height="64"/>
+  <object name="ET_SPIKES" x="1024" y="768" width="64" height="64"/>
+ </objectgroup>
+ <layer name="nowallies" width="30" height="14">
+  <data encoding="base64" compression="zlib">
+   eJyrZ2BYUMHAwEAvXM/AcIABCjJx4EqgGmrbW8lAGOByD6UYaH8CEdZTHRCyt5JG7iLC3gXYxIFpY0E+EMPSCIxPDK6HpBm89uICQP0MNRD6ADKfGJyPlJ5H7R21dzDYWw/RnwCkE/Yj8YnB9QNUVsEAADh7ewg=
+  </data>
+ </layer>
+</map>

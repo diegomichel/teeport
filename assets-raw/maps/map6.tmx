@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" width="20" height="13" tilewidth="64" tileheight="64">
+ <tileset firstgid="1" name="tilemapinkscape" tilewidth="64" tileheight="64">
+  <image source="tilemapinkscape.png" trans="000000" width="1024" height="1024"/>
+ </tileset>
+ <layer name="Capa de Patrones 1" width="20" height="13">
+  <data encoding="base64" compression="zlib">
+   eJzjYmBg4BrFo3gUj2IgBgC6zAop
+  </data>
+ </layer>
+ <layer name="Capa de patrones 2" width="20" height="13">
+  <data encoding="base64" compression="zlib">
+   eJztksENwCAIRf8eHYqj7QlGcxRHK4ZgOKBe7K0kPwRDnsK3APUGcEIFaJrrY7lpToO1hzZiY0jnTTAjtB/XRvTzpsHWLyuxsVIeB892d8WY8Xw++pDH4b3Zf1z9v4xHoc78Wfnh++87jmdeZ/64H8XmbiekLHkBsJ9keA==
+  </data>
+ </layer>
+ <layer name="nowallies" width="20" height="13">
+  <data encoding="base64" compression="zlib">
+   eJxjYGBgqCACEwuAahcQUlMPVJNPAAPVHACZRYx5QPUMNQRw/qh5OEE9RH0CPgxUk4DLvHqkOCNkFzIg1n20MK8eyb3Y0iMp6Q8dYIsfUuIDGexnwB4/sPgg1W2EAACFEVo5
+  </data>
+ </layer>
+ <objectgroup name="Capa de Objetos 1" width="20" height="13">
+  <object name="ET_WALL_NOPORTAL" x="0" y="0" width="64" height="832"/>
+  <object name="ET_WALL_NOPORTAL" x="64" y="0" width="1216" height="64"/>
+  <object name="ET_WALL_NOPORTAL" x="1216" y="64" width="64" height="768"/>
+  <object name="ET_WALL_NOPORTAL" x="320" y="768" width="896" height="64"/>
+  <object name="ET_WALL_NOPORTAL" x="832" y="576" width="384" height="192"/>
+  <object name="ET_WALL_NOPORTAL" x="640" y="576" width="128" height="64"/>
+  <object x="640" y="640" width="128" height="128"/>
+  <object x="320" y="512" width="192" height="256"/>
+  <object name="ET_WALL_NOPORTAL" x="320" y="448" width="192" height="64"/>
+  <object x="64" y="64" width="192" height="64"/>
+  <object name="ET_WALL_NOPORTAL" x="576" y="64" width="640" height="384"/>
+  <object name="ET_PRINCESS" x="1152" y="512" width="64" height="64"/>
+  <object name="ET_PLAYER" x="128" y="640" width="64" height="64"/>
+  <object x="64" y="768" width="256" height="64"/>
+  <object name="ET_SPIKES" x="768" y="704" width="64" height="64"/>
+ </objectgroup>
+</map>

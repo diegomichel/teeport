@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" width="60" height="13" tilewidth="64" tileheight="64">
+ <tileset firstgid="1" name="tilemapinkscape" tilewidth="64" tileheight="64">
+  <image source="tilemapinkscape.png" trans="000000" width="1024" height="1024"/>
+ </tileset>
+ <layer name="fondo" width="60" height="13">
+  <data encoding="base64" compression="zlib">
+   eJztw0ENAAAMA6F717/gGZgESFg1VVXV5wH/Nx55
+  </data>
+ </layer>
+ <layer name="Capa de Patrones 1" width="60" height="13">
+  <data encoding="base64" compression="zlib">
+   eJztltkNgCAQBV8fVoEWYgeyVVgPnWhp7kY/jIIcKp4vmXgECOOaDQowJYAvoICerwYfSTnW1sTOay08ITbfhp+Z3jf3aa4Sh69AqWtqXq92oBffUVvenZnY/5l4LHn2x14oHNRrX4HCd7wvCb4CbY2J8Z0nRz9I7VfLVOxRTfdSM/YiG1u1zNEPjvI9Ijl63518c+T3fXfEVSHs7Nl5uPpsHHh+pgGchFNB
+  </data>
+ </layer>
+ <objectgroup name="Capa de Objetos 1" width="60" height="13">
+  <object name="ET_WALL" x="0" y="0" width="64" height="256"/>
+  <object name="ET_WALL" x="64" y="768" width="576" height="64"/>
+  <object name="ET_WALL" x="3776" y="0" width="64" height="768"/>
+  <object name="ET_PLAYER" x="1984" y="512" width="64" height="64"/>
+  <object name="ET_PRINCESS" x="1984" y="128" width="64" height="64"/>
+  <object x="1984" y="256" width="128" height="128"/>
+  <object x="704" y="320" width="128" height="128"/>
+  <object x="256" y="192" width="128" height="128"/>
+  <object name="ET_WALL_NOPORTAL" x="1280" y="256" width="512" height="256"/>
+  <object name="ET_WALL_NOPORTAL" x="64" y="0" width="448" height="64"/>
+  <object x="512" y="0" width="3264" height="64"/>
+  <object name="ET_WALL_NOPORTAL" x="0" y="256" width="64" height="384"/>
+  <object x="0" y="640" width="64" height="192"/>
+  <object name="ET_SPIKES" x="640" y="800" width="512" height="32"/>
+  <object name="ET_SPIKES" x="1152" y="736" width="128" height="32"/>
+  <object name="ET_SPIKES" x="1280" y="736" width="64" height="32"/>
+  <object x="1152" y="768" width="2688" height="64"/>
+ </objectgroup>
+ <layer name="noportaldraw" width="60" height="13">
+  <data encoding="base64" compression="zlib">
+   eJxjYGBgWI8Hj4KRCcqQ8EgBQ9HPwDyaQIn+MjRcz8CwIB8HBsodoNzFlAFq+zcfj9r8Uf9iNYOW+YMG6RnkrwRsuB6HXfT272IK9FPLnfQq+yiNXxgYauU0pWAk+XU4gsUE8FABABR4Nmc=
+  </data>
+ </layer>
+ <layer name="caritas" width="60" height="13">
+  <data encoding="base64" compression="zlib">
+   eJzt0U0SQzAAhuHc/walDoA6AGrs0QvQLrgBG5beG0hIRjLNO/Ms8zPzCeGT6YEAIZ6I7v2O8WIkSPFCpuneUcKk6S2VchQo8Ual6d5ZwqLpLRuydd+jGrTo8FE45+q+PQZ88VM45+q+Z3N137P5ff2+Nuy7YkN98Z5/29d0O11sbl4=
+  </data>
+ </layer>
+</map>

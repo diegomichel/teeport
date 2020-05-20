@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" width="60" height="30" tilewidth="64" tileheight="64">
+ <tileset firstgid="1" name="tilemapinkscape" tilewidth="64" tileheight="64">
+  <image source="tilemapinkscape.png" trans="000000" width="1024" height="1024"/>
+ </tileset>
+ <layer name="Capa de patrones 2" width="60" height="30">
+  <data encoding="base64" compression="zlib">
+   eJztw0ENAAAMA6H717/fCRkkrJqqqqqqqqr64gGcEE1Z
+  </data>
+ </layer>
+ <layer name="Capa de Patrones 1" width="60" height="30">
+  <data encoding="base64" compression="zlib">
+   eJzt1EcRgEAUwND1b4digGKAYoBigHImqNiZ/TnkEAOvSinV1FBLVeHfUU8DjQF+opkWWgP8RjsddAb4i2566A3wuf3QK73SK73SK73Sq/I/tx96pVd6pVd6pVd6Vf7n9kOv9Eqv9Eqv9Or/D9Mw1nA=
+  </data>
+ </layer>
+ <layer name="Capa de patrones 3" width="60" height="30">
+  <data encoding="base64" compression="zlib">
+   eJztmU1uAjEMhX2maqg4RzfAjjN0xVX6g+QttD1A/6RepdygbMqSF9AIGpTEyThAUp70ZCRMPF/iRBnREHGPiP6BvxoYkVeIKf6FSVEjorHmeLZ627XlnDViNDwO70GN3PPs0qjj3F+j364Qb+BbeEKbOdx87pObN/c8n0oeXs5VM7Z3NHvN08+c+jx38D38AD/CUys/tnck+dI5cfF2eZ4ZPIef4Gf45TCfI8cP5kvHVOL9U+sVfoPf4Q/408qPPZMk+dIxNXjbWqanvhEXsB0XdLozf18avK1MX/8gLmE7Luk8znxlXjbr6VrjnGe+VNq8Zj1da1wjr2//SniPdH9WqdGur2f/smAMlWdxSZN3QNu7qssDQZ3cPa/Jq6Gu7wuh/XBuvF0V2g8V8rLv+9p4Q/uhNt6QLrxlKPVeUipv6r2kYF5O+V2pvKn3klJ5U3XhrVuGt6Hd/0m1G6zjNTPD5ok=
+  </data>
+ </layer>
+ <layer name="Capa de patrones 4" width="60" height="30">
+  <data encoding="base64" compression="zlib">
+   eJztzlENgDAQBcHzLw2KgQJe+lT0CJlJ9n+rAOB/jnSmka7mlx1mutOT3uYXAAAAAODbFjg3Bp0=
+  </data>
+ </layer>
+ <objectgroup name="Cajas" width="60" height="30">
+  <object name="ET_BOX" x="1216" y="576" width="64" height="64"/>
+  <object name="ET_BOX" x="1312" y="544" width="64" height="64"/>
+  <object name="ET_BOX" x="1376" y="544" width="64" height="64"/>
+  <object name="ET_BOX" x="1440" y="544" width="64" height="64"/>
+  <object name="ET_BOX" x="1504" y="544" width="64" height="64"/>
+  <object name="ET_BOX" x="1568" y="544" width="64" height="64"/>
+  <object name="ET_BOX" x="1312" y="608" width="64" height="64"/>
+  <object name="ET_BOX" x="1376" y="608" width="64" height="64"/>
+  <object name="ET_BOX" x="1440" y="608" width="64" height="64"/>
+  <object name="ET_BOX" x="1504" y="608" width="64" height="64"/>
+  <object name="ET_BOX" x="1568" y="608" width="64" height="64"/>
+  <object name="ET_BOX" x="1248" y="672" width="64" height="64"/>
+  <object name="ET_BOX" x="1312" y="672" width="64" height="64"/>
+  <object name="ET_BOX" x="1376" y="672" width="64" height="64"/>
+  <object name="ET_BOX" x="1440" y="672" width="64" height="64"/>
+  <object name="ET_BOX" x="1504" y="672" width="64" height="64"/>
+  <object name="ET_BOX" x="1568" y="672" width="64" height="64"/>
+  <object name="ET_BOX" x="1248" y="736" width="64" height="64"/>
+  <object name="ET_BOX" x="1312" y="736" width="64" height="64"/>
+  <object name="ET_BOX" x="1376" y="736" width="64" height="64"/>
+  <object name="ET_BOX" x="1440" y="736" width="64" height="64"/>
+  <object name="ET_BOX" x="1504" y="736" width="64" height="64"/>
+  <object name="ET_BOX" x="1568" y="736" width="64" height="64"/>
+  <object name="ET_BOX" x="1248" y="800" width="64" height="64"/>
+  <object name="ET_BOX" x="1312" y="800" width="64" height="64"/>
+  <object name="ET_BOX" x="1440" y="800" width="64" height="64"/>
+  <object name="ET_BOX" x="1376" y="800" width="64" height="64"/>
+  <object name="ET_BOX" x="1504" y="800" width="64" height="64"/>
+  <object name="ET_BOX" x="1568" y="800" width="64" height="64"/>
+  <object name="ET_BOX" x="1248" y="864" width="64" height="64"/>
+  <object name="ET_BOX" x="1312" y="864" width="64" height="64"/>
+  <object name="ET_BOX" x="1376" y="864" width="64" height="64"/>
+  <object name="ET_BOX" x="1440" y="864" width="64" height="64"/>
+  <object name="ET_BOX" x="1504" y="864" width="64" height="64"/>
+  <object name="ET_BOX" x="1568" y="864" width="64" height="64"/>
+  <object name="ET_BOX" x="672" y="608" width="64" height="64"/>
+  <object name="ET_BOX" x="672" y="800" width="64" height="64"/>
+  <object name="ET_BOX" x="672" y="928" width="64" height="64"/>
+  <object name="ET_BOX" x="672" y="1056" width="64" height="64"/>
+  <object name="ET_BOX" x="2208" y="288" width="64" height="64"/>
+  <object name="ET_BOX" x="2208" y="416" width="64" height="64"/>
+  <object name="ET_BOX" x="2208" y="544" width="64" height="64"/>
+  <object name="ET_BOX" x="2208" y="672" width="64" height="64"/>
+  <object name="ET_BOX" x="1056" y="1760" width="64" height="64"/>
+  <object name="ET_BOX" x="1120" y="1632" width="64" height="64"/>
+  <object name="ET_BOX" x="1120" y="1504" width="64" height="64"/>
+  <object name="ET_BOX" x="1120" y="1376" width="64" height="64"/>
+  <object name="ET_BOX" x="1120" y="1248" width="64" height="64"/>
+  <object name="ET_BOX" x="1120" y="1056" width="64" height="64"/>
+ </objectgroup>
+ <objectgroup name="Otras" width="60" height="30">
+  <object name="ET_PRINCESS" x="3712" y="128" width="64" height="64"/>
+  <object name="ET_PLAYER" x="448" y="1664" width="64" height="64"/>
+ </objectgroup>
+ <layer name="Capa de patrones 5" width="60" height="30">
+  <data encoding="base64" compression="zlib">
+   eJzt10EKgCAURdG31NaQk5bTUlpahTQJFQI1vL4D4lAvDj5K0jbJUtwXTeJq3d2bFqRjjUulFRrdtQa/L5t72dzL8J4lz8yg9ua4l829bO5lG6k3N1O/yPWm/n49/3n3+S3OG+l9a3Avm3vZ3MvmXrYZe/++Q28nlU5lJQ==
+  </data>
+ </layer>
+ <objectgroup name="paredes" width="60" height="30">
+  <object name="ET_WALL_NOPORTAL" x="0" y="0" width="3840" height="64"/>
+  <object name="ET_WALL_NOPORTAL" x="3776" y="64" width="64" height="1856"/>
+  <object name="ET_WALL_NOPORTAL" x="0" y="64" width="64" height="1856"/>
+  <object x="320" y="192" width="64" height="256"/>
+  <object x="1024" y="384" width="64" height="256"/>
+  <object x="1152" y="576" width="64" height="448"/>
+  <object x="1664" y="576" width="64" height="448"/>
+  <object x="1216" y="960" width="448" height="64"/>
+  <object x="1792" y="320" width="64" height="256"/>
+  <object x="2240" y="64" width="64" height="192"/>
+  <object x="2560" y="320" width="64" height="256"/>
+  <object x="2240" y="832" width="64" height="256"/>
+  <object x="2880" y="1408" width="64" height="256"/>
+  <object x="3136" y="384" width="64" height="192"/>
+  <object x="3264" y="1024" width="64" height="256"/>
+  <object x="2688" y="1088" width="320" height="64"/>
+  <object x="320" y="1152" width="384" height="64"/>
+  <object x="640" y="192" width="704" height="64"/>
+  <object x="3392" y="576" width="320" height="64"/>
+  <object x="2368" y="1152" width="128" height="64"/>
+  <object x="3328" y="192" width="448" height="64"/>
+  <object x="3264" y="192" width="64" height="64"/>
+  <object x="64" y="1856" width="3712" height="64"/>
+  <object name="ET_SPIKES" x="64" y="64" width="960" height="64"/>
+ </objectgroup>
+</map>
