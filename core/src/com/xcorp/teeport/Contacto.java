@@ -5,7 +5,7 @@ import com.badlogic.gdx.physics.box2d.Contact;
 import com.badlogic.gdx.physics.box2d.ContactImpulse;
 import com.badlogic.gdx.physics.box2d.ContactListener;
 import com.badlogic.gdx.physics.box2d.Manifold;
-import com.xcorp.teeport.Effects.Shit;
+import com.xcorp.teeport.Effects.Debris;
 
 
 public class Contacto implements ContactListener {
@@ -30,11 +30,11 @@ public class Contacto implements ContactListener {
         }
 
         if (entityA.getEntityType() == EntityType.ET_SHIT && entityA.touch != null) {
-            ((Shit) entityA.touch).touch(entityA, entityB);
+            ((Debris) entityA.touch).touch(entityA, entityB);
         }
 
         if (entityB.getEntityType() == EntityType.ET_SHIT && entityB.touch != null) {
-            ((Shit) entityB.touch).touch(entityB, entityA);
+            ((Debris) entityB.touch).touch(entityB, entityA);
         }
 
         if (entityA.getEntityType() == EntityType.ET_PLAYER) {

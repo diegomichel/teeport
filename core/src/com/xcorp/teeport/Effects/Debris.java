@@ -21,7 +21,7 @@ import com.xcorp.teeport.ui.AssetsScreen;
 import com.xcorp.teeport.utils.Utils;
 
 
-public class Shit extends Brain {
+public class Debris extends Brain {
     Texture texture;
     Sound touchSound;
     BodyDef bodyDef;
@@ -34,7 +34,7 @@ public class Shit extends Brain {
     long spawnTime;
     Entity ent;
 
-    public Shit(Vector2 position) {
+    public Debris(Vector2 position) {
         touchSound = AssetsScreen.getSound("shitSound");
         texture = AssetsScreen.getTexture("shitTexture");
 

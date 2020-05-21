@@ -17,7 +17,7 @@ import com.badlogic.gdx.physics.box2d.FixtureDef;
 import com.badlogic.gdx.physics.box2d.PolygonShape;
 import com.badlogic.gdx.utils.Array;
 import com.badlogic.gdx.utils.TimeUtils;
-import com.xcorp.teeport.Effects.LittleShits;
+import com.xcorp.teeport.Effects.DebrisParticles;
 import com.xcorp.teeport.controllers.Controls;
 import com.xcorp.teeport.ui.AssetsScreen;
 import com.xcorp.teeport.utils.Utils;
@@ -263,7 +263,7 @@ public class Player extends Brain {
         this.body.setLinearVelocity(0, 0);
         this.body.setTransform(this.spawnPoint, 0);
         dieSound.play();
-        new LittleShits(playerPosition);
+        new DebrisParticles(playerPosition);
     }
 
     public void touch(Entity self, Entity other) {

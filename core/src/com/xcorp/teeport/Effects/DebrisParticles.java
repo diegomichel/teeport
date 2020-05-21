@@ -11,7 +11,7 @@ import com.xcorp.teeport.Entity;
 import com.xcorp.teeport.EntityType;
 import com.xcorp.teeport.GameScreen;
 
-public class LittleShits extends Brain {
+public class DebrisParticles extends Brain {
     BodyDef bodyDef;
     Body body;
     Entity ent;
@@ -20,7 +20,7 @@ public class LittleShits extends Brain {
     int maxCount = 10;
     long time;
 
-    public LittleShits(Vector2 position) {
+    public DebrisParticles(Vector2 position) {
         bodyDef = new BodyDef();
         bodyDef.type = BodyType.StaticBody;
 
@@ -45,7 +45,7 @@ public class LittleShits extends Brain {
     public void think() {
         if (time < TimeUtils.millis()) {
             time = TimeUtils.millis() + 40;
-            new Shit(this.body.getPosition());
+            new Debris(this.body.getPosition());
             count++;
         }
         if (count > maxCount) {
