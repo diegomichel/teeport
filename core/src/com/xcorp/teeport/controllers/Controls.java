@@ -29,11 +29,6 @@ public class Controls implements InputProcessor {
 
     public Controls() {
         Gdx.input.setCatchBackKey(true);
-
-        Controls.joystickAPosition = new Vector2(0, 0);
-        Controls.joystickBPosition = new Vector2(0, 0);
-        Controls.mousestickPosition = new Vector2(0, 0);
-
         joystickA = new Joystick(new Texture(Gdx.files.internal("controls.png")));
         joystickB = new Joystick(new Texture(Gdx.files.internal("controls2.png")));
     }
@@ -74,8 +69,7 @@ public class Controls implements InputProcessor {
             lastMouseX = cursorPosition.x;
             lastMouseY = cursorPosition.y;
 
-            joystickBPosition.set(cursorPosition.x, cursorPosition.y);
-            joystickBPosition.add(-playerPosition.x, -playerPosition.y);
+            this.joystickA.cursorPosition.set(cursorPosition.x, cursorPosition.y);
         }
 
         return false;
