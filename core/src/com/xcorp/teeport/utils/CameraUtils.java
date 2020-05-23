@@ -16,17 +16,15 @@ public class CameraUtils {
 
         Utils.vectorInWorldCoordinates(player);
 
-        float cameraMinX = cameraHalfWidth;
         float cameraMaxX = Float.parseFloat(TileMap.map.getProperties().get("width").toString()) * Float.parseFloat(TileMap.map.getProperties().get("tilewidth").toString())
                 - cameraHalfWidth;
-        float cameraMinY = cameraHalfHeight;
         float cameraMaxY = Float.parseFloat(TileMap.map.getProperties().get("height").toString()) * Float.parseFloat(TileMap.map.getProperties().get("tileheight").toString())
                 - cameraHalfHeight;
 
         if (player.y > camera.position.y - camera.viewportHeight / 2
                 && player.y < camera.position.y + camera.viewportHeight / 2) {
         } else {
-            if (player.y < camera.position.y && camera.position.y > cameraMinY
+            if (player.y < camera.position.y && camera.position.y > cameraHalfHeight
                     || player.y > camera.position.y
                     && camera.position.y < cameraMaxY) {
                 camera.position.y = player.y;
@@ -41,7 +39,7 @@ public class CameraUtils {
         //
         // } else {
 
-        if (player.x < camera.position.x && camera.position.x > cameraMinX
+        if (player.x < camera.position.x && camera.position.x > cameraHalfWidth
                 || player.x > camera.position.x
                 && camera.position.x < cameraMaxX) {
             camera.position.x = player.x;

@@ -84,21 +84,9 @@ public class LoadingMap implements Screen {
         else spawns = stats.getInteger("spawns");
 
         stats.clear();
-        if (time > (int) (GameScreen.currentTime - GameScreen.startTime) / 1000)
-            stats.putInteger("time", (int) (GameScreen.currentTime - GameScreen.startTime) / 1000);
-        else
-            stats.putInteger("time", time);
-
-        if (teleports > Player.teleportations)
-            stats.putInteger("teleports", Player.teleportations);
-        else
-            stats.putInteger("teleports", teleports);
-
-
-        if (spawns > Weapon.shots)
-            stats.putInteger("spawns", Weapon.shots);
-        else
-            stats.putInteger("spawns", spawns);
+        stats.putInteger("time", Math.min(time, (int) (GameScreen.currentTime - GameScreen.startTime) / 1000));
+        stats.putInteger("teleports", Math.min(teleports, Player.teleportations));
+        stats.putInteger("spawns", Math.min(spawns, Weapon.shots));
 
         stats.flush();
     }

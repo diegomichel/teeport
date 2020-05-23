@@ -130,7 +130,7 @@ public class AssetsScreen implements Screen, AssetErrorListener {
         if (manager.update()) {
             if (manager.getProgress() == 1) {
                 if (Gdx.input.justTouched()) {
-                    game.setScreen((Screen) game.mainMenu);
+                    game.setScreen(game.mainMenu);
                 }
             }
         }
@@ -145,7 +145,7 @@ public class AssetsScreen implements Screen, AssetErrorListener {
 
     @Override
     public void error(AssetDescriptor descriptor, Throwable t) {
-        Gdx.app.error("AssetManagerTest", "couldn't load asset '" + descriptor.fileName + "'", (Exception) t);
+        Gdx.app.error("AssetManagerTest", "couldn't load asset '" + descriptor.fileName + "'", t);
     }
 
     public static Sound getSound(String fileName) {

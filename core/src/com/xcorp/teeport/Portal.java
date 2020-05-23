@@ -22,21 +22,20 @@ public class Portal extends Brain {
     boolean blue = false;
     boolean orange = false;
     static boolean isNextPortalBlue = true;
-    float birthDate = 0;
+    float birthDate;
 
-    Vector2 spritePosition = null;
-    Vector2 positionBox2d = null;
-    Vector2 normal = null;
+    Vector2 spritePosition;
+    Vector2 positionBox2d;
+    Vector2 normal;
 
-    Sprite portalSprite = null;
+    Sprite portalSprite;
 
-    Body body = null;
-    Fixture bodyFixture = null;
-    float angleOffset = 0;
+    Body body;
+    float angleOffset;
 
     float halfX;
     float halfY;
-    Vector2 center = null;
+    Vector2 center;
     float boxAngle;
 
     static boolean blocked = false;
@@ -197,12 +196,12 @@ public class Portal extends Brain {
 
         if (Weapon.target.entityType == EntityType.ET_WALL_NOPORTAL) return Portal.blocked;
 
-        Vector2 center = new Vector2();
-        Vector2 pointA = new Vector2();
-        Vector2 pointB = new Vector2();
-        Vector2 pointC = new Vector2();
-        Vector2 pointD = new Vector2();
-        Vector2 center2 = new Vector2();
+        Vector2 center;
+        Vector2 pointA;
+        Vector2 pointB;
+        Vector2 pointC;
+        Vector2 pointD;
+        Vector2 center2;
 
         center = normal.cpy();
         center.scl(3);
@@ -377,22 +376,21 @@ public class Portal extends Brain {
         line = Utils.rotateLineAroundFirstPoint(line, 10);
 
 
-        Vector2 rayCastCenter = pos;
         Vector2 normalcpy = normal.cpy();
         normalcpy.scl(10);
         Utils.vectorInBox2dCoordinates(normalcpy);
-        rayCastCenter.add(normalcpy);
-        Utils.vectorInWorldCoordinates(rayCastCenter);
+        pos.add(normalcpy);
+        Utils.vectorInWorldCoordinates(pos);
 
         float angleDown = normal.angle() + -90;
         Vector2 pointC = Utils.polar2Rectangular(angleDown,
                 Settings.PORTAL_HEIGHT / 2);
-        pointC.add(rayCastCenter);
+        pointC.add(pos);
 
         angleDown = normal.angle() + 90;
         Vector2 pointD = Utils.polar2Rectangular(angleDown,
                 Settings.PORTAL_HEIGHT / 2);
-        pointD.add(rayCastCenter);
+        pointD.add(pos);
 
         Line line2 = new Line(pointD, pointC);
         line2 = Utils.rotateLineAroundFirstPoint(line2, -10);

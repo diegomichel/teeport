@@ -28,8 +28,8 @@ public class Player extends Brain {
     public float health = Settings.PLAYER_HEALTH;
     public float radius = Settings.PLAYER_RADIUS;
     public Body body;
-    Texture playerTexture = null;
-    Texture eyesTexture = null;
+    Texture playerTexture;
+    Texture eyesTexture;
 
     BodyDef bodyDef = new BodyDef();
     FixtureDef fixtureDef;

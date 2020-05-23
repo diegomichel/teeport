@@ -100,7 +100,7 @@ public class GameScreen implements Screen {
         GameScreen.batch.setProjectionMatrix(AssetsScreen.camera.combined);
 
         GameScreen.batch.begin();
-        Array bodies = new Array();
+        Array<Body> bodies = new Array<>();
         GameScreen.world.getBodies(bodies);
         Iterator<Body> bi = bodies.iterator();
         while (bi.hasNext()) {
@@ -141,7 +141,7 @@ public class GameScreen implements Screen {
         RemoveDeadBodies(bodies);
     }
 
-    private void RemoveDeadBodies(Array bodies) {
+    private void RemoveDeadBodies(Array<Body> bodies) {
         Iterator<Body> bi;
         GameScreen.world.getBodies(bodies);
         bi = bodies.iterator();

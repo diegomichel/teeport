@@ -14,12 +14,12 @@ import com.xcorp.teeport.ui.AssetsScreen;
 import com.xcorp.teeport.utils.Utils;
 
 public class Princess extends Brain {
-    Texture texture = null;
-    Texture eyesTexture = null;
+    Texture texture;
+    Texture eyesTexture;
     BodyDef bodyDef = new BodyDef();
-    FixtureDef fixtureDef = null;
-    CircleShape circleShape = null;
-    Body body = null;
+    FixtureDef fixtureDef;
+    CircleShape circleShape;
+    Body body;
     float lastTouch;
     Entity self;
 

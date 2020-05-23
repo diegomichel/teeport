@@ -91,8 +91,6 @@ public class Joystick {
         Vector3 centerPosition = new Vector3(this.center.x, this.center.y, 0);
         AssetsScreen.camera.unproject(centerPosition);
 
-        Vector2 projectedCenter = new Vector2(centerPosition.x, centerPosition.y);
-
-        return projectedCenter;
+        return new Vector2(centerPosition.x, centerPosition.y);
     }
 }

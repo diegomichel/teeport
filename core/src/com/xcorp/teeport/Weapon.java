@@ -170,7 +170,7 @@ public class Weapon implements RayCastCallback {
         float step = 16;
         float angle = Utils.anglePP(playerPosition, target);
 
-        Vector2 trajectoryPointPosition = new Vector2();
+        Vector2 trajectoryPointPosition;
         trajectoryPointPosition = playerPosition.cpy();
 
         this.trajectoryPoint = this.trajectoryPointOrange;
@@ -298,8 +298,6 @@ public class Weapon implements RayCastCallback {
         }
 
         Weapon.shots += 1;
-
-        return;
 
     }
 

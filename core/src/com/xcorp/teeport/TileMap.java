@@ -97,10 +97,10 @@ public class TileMap {
     // here, instead of the other place.
     public void createFigureFromObject(MapObject object) {
         MapFigure figure = new MapFigure();
-        Vector2 objectPosition = null;
+        Vector2 objectPosition;
 
-        PolygonShape polygonShape = null;
-        Body body = null;
+        PolygonShape polygonShape;
+        Body body;
         Entity entity = new Entity();
         BodyDef bodyDef = new BodyDef();
         FixtureDef fixtureDef = new FixtureDef();
@@ -207,9 +207,9 @@ public class TileMap {
     }
 
     public void spawnEntities() {
-        PolygonShape polygonShape = null;
-        ChainShape chainShape = null;
-        Body body = null;
+        PolygonShape polygonShape;
+        ChainShape chainShape;
+        Body body;
 
         for (MapFigure figure : this.figures) {
             polygonShape = null;
