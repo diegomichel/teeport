@@ -398,10 +398,6 @@ public class Portal extends Brain {
         line2 = Utils.rotateLineAroundFirstPoint(line2, -10);
 
 
-        if (Utils.intersectionPoint(line.pointA.x, line.pointA.y, line.pointB.x, line.pointB.y, line2.pointA.x, line2.pointA.y, line2.pointB.x, line2.pointB.y) != null) {
-            return true;
-        }
-
-        return false;
+        return Utils.intersectionPoint(line.pointA.x, line.pointA.y, line.pointB.x, line.pointB.y, line2.pointA.x, line2.pointA.y, line2.pointB.x, line2.pointB.y) != null;
     }
 }

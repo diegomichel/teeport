@@ -25,8 +25,6 @@ public class Box extends Brain {
     Body body;
     float radius = 32;
     Entity ent;
-    Entity entityA;
-    Entity entityB;
     public float highSpeed;
     public long highSpeedTime;
 
@@ -70,7 +68,6 @@ public class Box extends Brain {
         entity.draw = this;
         entity.touch = this;
         entity.self = body;
-
 
         this.body.setUserData(entity);
 

@@ -1,5 +1,5 @@
 package com.xcorp.teeport;
 
 public enum ShapeForm {
-    BOX, POLYGON, CIRCLE, CHAINSHAPE, CHAINSHAPELOOP;
+    BOX, POLYGON, CIRCLE, CHAINSHAPE, CHAINSHAPELOOP
 }

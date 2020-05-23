@@ -131,17 +131,17 @@ public class Player extends Brain {
             }
         }
 
-        if (Gdx.input.isKeyPressed(Keys.A) || (controller.joystickB.active == true && controller.joystickB.getDirectionVector().x < -10)) {
+        if (Gdx.input.isKeyPressed(Keys.A) || (controller.joystickB.active && controller.joystickB.getDirectionVector().x < -10)) {
             if (velocity.x > -1)
                 impulse.x = -0.7f;
         }
 
-        if (Gdx.input.isKeyPressed(Keys.D) || (controller.joystickB.active == true && controller.joystickB.getDirectionVector().x > 10)) {
+        if (Gdx.input.isKeyPressed(Keys.D) || (controller.joystickB.active && controller.joystickB.getDirectionVector().x > 10)) {
             if (velocity.x < 1)
                 impulse.x = 0.7f;
         }
 
-        if (Gdx.input.isKeyPressed(Keys.W) || (controller.joystickB.active == true && controller.joystickB.getDirectionVector().y > 15)) {
+        if (Gdx.input.isKeyPressed(Keys.W) || (controller.joystickB.active && controller.joystickB.getDirectionVector().y > 15)) {
             if (playerTouchingGround()) {
                 jumpSound.stop();
                 impulse.y = 0.4f * Settings.PLAYER_RADIUS;
@@ -155,8 +155,7 @@ public class Player extends Brain {
         Entity footData = (Entity) footSensorFixture.getBody().getUserData();
 
         if (footData != null) {
-            if (footData.getNumFootContacts() < 1)
-                return false;
+            return footData.getNumFootContacts() >= 1;
         }
         return true;
     }

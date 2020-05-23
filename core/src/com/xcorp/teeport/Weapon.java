@@ -157,13 +157,8 @@ public class Weapon implements RayCastCallback {
         this.trEndPos.y -= this.ghostPortalSprite.getHeight() / 2;
         this.trEndPos.x -= this.ghostPortalSprite.getWidth() / 2;
         this.ghostPortalSprite.setPosition(this.trEndPos.x, this.trEndPos.y);
-        // ghostPortalSprite.setSize(ghostPortalSprite.getWidth(),
-        // Settings.PORTAL_HEIGHT);
         this.ghostPortalSprite.rotate(this.trNormal.angle());
         this.ghostPortalSprite.draw(GameScreen.batch);
-
-        // this.drawTrajectoryFromPlayerToGhost(trEndPos);
-
     }
 
     public void drawTrajectoryFromPlayerToGhost(Vector2 target) {
@@ -212,7 +207,6 @@ public class Weapon implements RayCastCallback {
         if (TimeUtils.nanoTime() - this.lastShotTime < this.fireRate * 1000000)
             return;
         this.lastShotTime = TimeUtils.nanoTime();
-        // reset canFire flag
         this.canFire = true;
 
         Vector2 p1 = this.player.body.getPosition();

@@ -14,9 +14,6 @@ import com.xcorp.teeport.ui.AssetsScreen;
 
 public class Controls implements InputProcessor {
     public static int joystickAPointer = -1;
-    public static Vector2 joystickAPosition;
-    public static Vector2 joystickBPosition;
-    public static Vector2 mousestickPosition;
     public static float lastMouseX = 0;
     public static float lastMouseY = 0;
 
