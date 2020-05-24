@@ -373,7 +373,7 @@ public class Portal extends Brain {
 
     public static boolean hitPortal(Portal portal, Vector2 pos, Vector2 normal) {
         Line line = new Line(portal.getPortalRayCastPointA(), portal.getPortalRayCastPointB());
-        line = Utils.rotateLineAroundFirstPoint(line, 10);
+        Utils.rotateLineAroundFirstPoint(line, 10);
 
 
         Vector2 normalcpy = normal.cpy();
@@ -393,7 +393,7 @@ public class Portal extends Brain {
         pointD.add(pos);
 
         Line line2 = new Line(pointD, pointC);
-        line2 = Utils.rotateLineAroundFirstPoint(line2, -10);
+        Utils.rotateLineAroundFirstPoint(line2, -10);
 
 
         return Utils.intersectionPoint(line.pointA.x, line.pointA.y, line.pointB.x, line.pointB.y, line2.pointA.x, line2.pointA.y, line2.pointB.x, line2.pointB.y) != null;
