@@ -110,7 +110,7 @@ public class Player extends Brain {
         // Weapon
         this.weapon = new Weapon(Settings.PORTAL_GUN_RATE, this);
 
-        contacts = new Array<Entity>();
+        contacts = new Array<>();
     }
 
     public void spawn() {

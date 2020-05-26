@@ -37,7 +37,7 @@ public class GameScreen implements Screen {
     static Array<Entity> teleportBuffer;
 
     static {
-        teleportBuffer = new Array<Entity>();
+        teleportBuffer = new Array<>();
     }
 
     TileMap tileMap;
@@ -102,9 +102,7 @@ public class GameScreen implements Screen {
         GameScreen.batch.begin();
         Array<Body> bodies = new Array<>();
         GameScreen.world.getBodies(bodies);
-        Iterator<Body> bi = bodies.iterator();
-        while (bi.hasNext()) {
-            Body b = bi.next();
+        for (Body b : bodies) {
             if (b == null) {
                 continue;
             }

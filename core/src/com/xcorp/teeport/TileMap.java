@@ -47,7 +47,7 @@ public class TileMap {
     public TileMap(int mapname) {
         long startTime, endTime;
         this.font = new BitmapFont();
-        this.figures = new Array<MapFigure>();
+        this.figures = new Array<>();
 
         this.font.setColor(Color.RED);
 
@@ -109,69 +109,75 @@ public class TileMap {
             object.setName("ET_WALL");
         }
 
-        if (object.getName().equals("ET_PRINCESS")) {
-            float sideSize = Float.parseFloat(object.getProperties().get("width").toString());
-            objectPosition = new Vector2(Float.parseFloat(object.getProperties().get("x").toString()), Float.parseFloat(object.getProperties().get("y").toString()) + sideSize);
-            objectPosition.add(sideSize / 2, -sideSize / 2);
-            GameScreen.princess = new Princess(objectPosition);
-            return;
-        } else if (object.getName().equals("ET_PLAYER")) {
-            float sideSize = Float.parseFloat(object.getProperties().get("width").toString());
-            objectPosition = new Vector2(Float.parseFloat(object.getProperties().get("x").toString()), Float.parseFloat(object.getProperties().get("y").toString()) + sideSize);
-            objectPosition.add(sideSize / 2, -sideSize / 2);
-            GameScreen.player = new Player(objectPosition);
-            return;
-        } else if (object.getName().equals("ET_BOX")) {
-            float sideSize = Float.parseFloat(object.getProperties().get("width").toString());
-            objectPosition = new Vector2(Float.parseFloat(object.getProperties().get("x").toString()), Float.parseFloat(object.getProperties().get("y").toString()) + sideSize);
-            objectPosition.add(sideSize / 2, -sideSize / 2);
-            Utils.vectorInBox2dCoordinates(objectPosition);
-            new Box(objectPosition);
-            return;
-        } else if (object.getName().equals("ET_WALL") || object.getName().equals("ET_WALL_NOPORTAL")) {
-            figure.entityType = EntityType.ET_WALL;
-            if (object.getName().equals("ET_WALL_NOPORTAL")) {
-                figure.entityType = EntityType.ET_WALL_NOPORTAL;
+        switch (object.getName()) {
+            case "ET_PRINCESS": {
+                float sideSize = Float.parseFloat(object.getProperties().get("width").toString());
+                objectPosition = new Vector2(Float.parseFloat(object.getProperties().get("x").toString()), Float.parseFloat(object.getProperties().get("y").toString()) + sideSize);
+                objectPosition.add(sideSize / 2, -sideSize / 2);
+                GameScreen.princess = new Princess(objectPosition);
+                return;
             }
-
-            figure.setType(BodyType.StaticBody);
-            figure.setShapeForm(ShapeForm.BOX);
-            figure.setSize(new Vector2(Float.parseFloat(object.getProperties().get("width").toString()), Float.parseFloat(object.getProperties().get("height").toString())));
-            objectPosition = new Vector2(Float.parseFloat(object.getProperties().get("x").toString()), Float.parseFloat(object.getProperties().get("y").toString()));
-            figure.setPos(objectPosition.cpy());
-        } else if (object.getName().equals("ET_SPIKES")) {
-            Vector2 objectSize = new Vector2(Float.parseFloat(object.getProperties().get("width").toString()), Float.parseFloat(object.getProperties().get("height").toString()));
-            objectPosition = new Vector2(Float.parseFloat(object.getProperties().get("x").toString()), Float.parseFloat(object.getProperties().get("y").toString()) + Float.parseFloat(object.getProperties().get("height").toString()));
-            objectPosition.add(Float.parseFloat(object.getProperties().get("width").toString()) / 2, Float.parseFloat(object.getProperties().get("height").toString()) / 2);
-            Utils.vectorInBox2dCoordinates(objectPosition);
-
-            entity.setEntityType(EntityType.ET_SPIKES);
-
-            bodyDef.type = BodyType.StaticBody;
-            bodyDef.position.set(objectPosition);
-
-            fixtureDef.density = 1;
-            fixtureDef.friction = 1;
-            fixtureDef.restitution = 0;
-            fixtureDef.isSensor = true;
-
-            polygonShape = new PolygonShape();
-            Utils.vectorInBox2dCoordinates(objectSize);
-            polygonShape.setAsBox(objectSize.x / 2, objectSize.y / 2);
-
-            fixtureDef.shape = polygonShape;
-            body = GameScreen.world.createBody(bodyDef);
-            body.createFixture(fixtureDef);
-            entity.draw = figure;
-            figure.setBody(body);
-            body.setUserData(entity);
-            if (polygonShape != null) {
-                polygonShape.dispose();
+            case "ET_PLAYER": {
+                float sideSize = Float.parseFloat(object.getProperties().get("width").toString());
+                objectPosition = new Vector2(Float.parseFloat(object.getProperties().get("x").toString()), Float.parseFloat(object.getProperties().get("y").toString()) + sideSize);
+                objectPosition.add(sideSize / 2, -sideSize / 2);
+                GameScreen.player = new Player(objectPosition);
+                return;
             }
-            return;
-        } else {
-            Messages.warning(this, "Object name: " + object.getName() + " unrecognized, check your map objects");
-            return;
+            case "ET_BOX": {
+                float sideSize = Float.parseFloat(object.getProperties().get("width").toString());
+                objectPosition = new Vector2(Float.parseFloat(object.getProperties().get("x").toString()), Float.parseFloat(object.getProperties().get("y").toString()) + sideSize);
+                objectPosition.add(sideSize / 2, -sideSize / 2);
+                Utils.vectorInBox2dCoordinates(objectPosition);
+                new Box(objectPosition);
+                return;
+            }
+            case "ET_WALL":
+            case "ET_WALL_NOPORTAL":
+                figure.entityType = EntityType.ET_WALL;
+                if (object.getName().equals("ET_WALL_NOPORTAL")) {
+                    figure.entityType = EntityType.ET_WALL_NOPORTAL;
+                }
+
+                figure.setType(BodyType.StaticBody);
+                figure.setShapeForm(ShapeForm.BOX);
+                figure.setSize(new Vector2(Float.parseFloat(object.getProperties().get("width").toString()), Float.parseFloat(object.getProperties().get("height").toString())));
+                objectPosition = new Vector2(Float.parseFloat(object.getProperties().get("x").toString()), Float.parseFloat(object.getProperties().get("y").toString()));
+                figure.setPos(objectPosition.cpy());
+                break;
+            case "ET_SPIKES":
+                Vector2 objectSize = new Vector2(Float.parseFloat(object.getProperties().get("width").toString()), Float.parseFloat(object.getProperties().get("height").toString()));
+                objectPosition = new Vector2(Float.parseFloat(object.getProperties().get("x").toString()), Float.parseFloat(object.getProperties().get("y").toString()) + Float.parseFloat(object.getProperties().get("height").toString()));
+                objectPosition.add(Float.parseFloat(object.getProperties().get("width").toString()) / 2, Float.parseFloat(object.getProperties().get("height").toString()) / 2);
+                Utils.vectorInBox2dCoordinates(objectPosition);
+
+                entity.setEntityType(EntityType.ET_SPIKES);
+
+                bodyDef.type = BodyType.StaticBody;
+                bodyDef.position.set(objectPosition);
+
+                fixtureDef.density = 1;
+                fixtureDef.friction = 1;
+                fixtureDef.restitution = 0;
+                fixtureDef.isSensor = true;
+
+                polygonShape = new PolygonShape();
+                Utils.vectorInBox2dCoordinates(objectSize);
+                polygonShape.setAsBox(objectSize.x / 2, objectSize.y / 2);
+
+                fixtureDef.shape = polygonShape;
+                body = GameScreen.world.createBody(bodyDef);
+                body.createFixture(fixtureDef);
+                entity.draw = figure;
+                figure.setBody(body);
+                body.setUserData(entity);
+                if (polygonShape != null) {
+                    polygonShape.dispose();
+                }
+                return;
+            default:
+                Messages.warning(this, "Object name: " + object.getName() + " unrecognized, check your map objects");
+                return;
         }
 
         this.figures.add(figure);

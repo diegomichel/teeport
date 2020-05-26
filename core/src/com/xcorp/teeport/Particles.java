@@ -29,14 +29,14 @@ public class Particles {
         spriteBatch.setProjectionMatrix(AssetsScreen.camera.combined);
         this.effect.load(Gdx.files.internal("data/test.p.txt"), Gdx.files.internal("data/"));
         this.effect.setPosition(AssetsScreen.camera.viewportWidth / 2, AssetsScreen.camera.viewportHeight / 2);
-        this.emitters = new Array<ParticleEmitter>(this.effect.getEmitters());
+        this.emitters = new Array<>(this.effect.getEmitters());
         this.effect.getEmitters().clear();
         this.effect.getEmitters().add(this.emitters.get(1));
 
 
         this.noPortalEffect.load(Gdx.files.internal("data/noportal.p"), Gdx.files.internal("data/"));
         this.noPortalEffect.setPosition(AssetsScreen.camera.viewportWidth / 2, AssetsScreen.camera.viewportHeight / 2);
-        this.noPortalEmitters = new Array<ParticleEmitter>(this.noPortalEffect.getEmitters());
+        this.noPortalEmitters = new Array<>(this.noPortalEffect.getEmitters());
         this.noPortalEffect.getEmitters().clear();
         //  this.noPortalEffect.getEmitters().add(this.noPortalEmitters.get(0));
 

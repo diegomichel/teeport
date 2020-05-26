@@ -157,11 +157,9 @@ public class Portal extends Brain {
             }
         }, pointA, pointB);
 
-        Iterator<Entity> iterator = GameScreen.teleportBuffer.iterator();
-
-        while (iterator.hasNext()) {
+        for (Entity entity : GameScreen.teleportBuffer) {
             teleportSound.stop();
-            Entity ent = iterator.next();
+            Entity ent = entity;
             Vector2 bodyNextPosition = mate.body.getPosition().cpy();
             Vector2 bodyOffsetFromPortal = mate.normal.cpy();
             bodyOffsetFromPortal.scl(Settings.MAX_OBJECT_SIZE_TO_TELEPORT
