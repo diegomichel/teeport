@@ -25,7 +25,6 @@ public class MapFigure extends Brain {
     private Body body;
 
     private Texture texture = null;
-    private Sprite sprite = null;
 
     Vector2[] vertices;
 
@@ -50,15 +49,15 @@ public class MapFigure extends Brain {
             Vector2 position = this.body.getPosition().cpy();
             Utils.vectorInWorldCoordinates(position);
 
-            this.sprite = new Sprite(this.texture);
-            this.sprite.setSize(this.width, this.width);
-            this.sprite.setPosition(position.x - this.width / 2, position.y
+            Sprite sprite = new Sprite(this.texture);
+            sprite.setSize(this.width, this.width);
+            sprite.setPosition(position.x - this.width / 2, position.y
                     - this.width / 2);
-            this.sprite.setOrigin(this.width / 2, this.width / 2);
-            this.sprite.setRotation(MathUtils.radiansToDegrees
+            sprite.setOrigin(this.width / 2, this.width / 2);
+            sprite.setRotation(MathUtils.radiansToDegrees
                     * this.body.getAngle());
 
-            this.sprite.draw(GameScreen.batch);
+            sprite.draw(GameScreen.batch);
         }
     }
 

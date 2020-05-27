@@ -18,7 +18,6 @@ public class Controls implements InputProcessor {
     public static float lastMouseY = 0;
 
     public static boolean useJoystickToAim = false;
-    private static boolean dragged = false;
     public static Vector2 target;
 
     public Joystick joystickA;
@@ -79,7 +78,7 @@ public class Controls implements InputProcessor {
 
     @Override
     public boolean touchDown(int screenX, int screenY, int pointer, int button) {
-        dragged = false;
+        boolean dragged = false;
         if (Settings.CONTROLS_VISUAL_CONTROLS) {
             boolean rigthScreenSide = (screenX > Gdx.graphics.getWidth() / 2);
             if (rigthScreenSide) {

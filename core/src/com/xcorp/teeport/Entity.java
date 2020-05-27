@@ -12,7 +12,6 @@ public class Entity {
     public Body self = null;
     public boolean inLove = false;
 
-    private Portal portal;
     float teleportTime;
 
     float highSpeed;
@@ -34,7 +33,6 @@ public class Entity {
      * @param portal the portal to set
      */
     public void setPortal(Portal portal) {
-        this.portal = portal;
     }
 
     /**

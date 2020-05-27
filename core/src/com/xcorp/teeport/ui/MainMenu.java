@@ -21,13 +21,11 @@ public class MainMenu implements Screen {
     private SpriteBatch spriteBatch;
     private Texture background;
     private Teeport game;
-    private Skin skin;
-    private TextureAtlas atlas;
     private Stage stage;
 
     public MainMenu(Teeport g) {
-        this.atlas = new TextureAtlas(Gdx.files.internal("skins/pack.atlas"));
-        this.skin = new Skin(Gdx.files.internal("skins/uiskin.json"), atlas);
+        TextureAtlas atlas = new TextureAtlas(Gdx.files.internal("skins/pack.atlas"));
+        Skin skin = new Skin(Gdx.files.internal("skins/uiskin.json"), atlas);
         this.stage = new Stage(new ScreenViewport());
         this.stage.getViewport().update(Settings.SCREEN_WIDTH, Settings.SCREEN_HEIGHT, false);
 
@@ -36,8 +34,8 @@ public class MainMenu implements Screen {
         TextButton creditsButton = new TextButton("Credits", skin);
 
 
-        Table table = new Table(this.skin);
-        Table subTable = new Table(this.skin);
+        Table table = new Table(skin);
+        Table subTable = new Table(skin);
         stage.addActor(table);
         stage.addActor(subTable);
         table.setFillParent(true);

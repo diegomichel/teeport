@@ -12,16 +12,14 @@ import com.xcorp.teeport.EntityType;
 import com.xcorp.teeport.GameScreen;
 
 public class DebrisParticles extends Brain {
-    private BodyDef bodyDef;
     private Body body;
     private Entity ent;
 
     private int count = 0;
-    private int maxCount = 10;
     private long time;
 
     public DebrisParticles(Vector2 position) {
-        bodyDef = new BodyDef();
+        BodyDef bodyDef = new BodyDef();
         bodyDef.type = BodyType.StaticBody;
 
 
@@ -48,6 +46,7 @@ public class DebrisParticles extends Brain {
             new Debris(this.body.getPosition());
             count++;
         }
+        int maxCount = 10;
         if (count > maxCount) {
             this.ent.setDie(true);
         }

@@ -24,9 +24,6 @@ import com.xcorp.teeport.utils.Utils;
 public class Debris extends Brain {
     private Texture texture;
     private Sound touchSound;
-    private BodyDef bodyDef;
-    private FixtureDef fixtureDef;
-    private CircleShape circleShape;
     private Body body;
     private float radius = 16;
     private float radiusFactor;
@@ -40,12 +37,12 @@ public class Debris extends Brain {
 
         radiusFactor = (float) Math.random();
 
-        bodyDef = new BodyDef();
+        BodyDef bodyDef = new BodyDef();
         bodyDef.type = BodyType.DynamicBody;
-        fixtureDef = new FixtureDef();
+        FixtureDef fixtureDef = new FixtureDef();
 
 
-        circleShape = new CircleShape();
+        CircleShape circleShape = new CircleShape();
         circleShape.setRadius(radius * radiusFactor * Settings.WORLD_TO_BOX);
 
         fixtureDef.shape = circleShape;

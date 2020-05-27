@@ -21,7 +21,6 @@ public class Particles {
     private SpriteBatch spriteBatch;
     private float fpsCounter;
     private int emitterIndex;
-    private int particleCount = 10;
 
 
     public Particles(String file) {
@@ -56,7 +55,8 @@ public class Particles {
         if (this.fpsCounter > 3) {
             this.fpsCounter = 0;
             int activeCount = this.emitters.get(this.emitterIndex).getActiveCount();
-            System.out.println(activeCount + "/" + this.particleCount + " particles, FPS: " + Gdx.graphics.getFramesPerSecond());
+            int particleCount = 10;
+            System.out.println(activeCount + "/" + particleCount + " particles, FPS: " + Gdx.graphics.getFramesPerSecond());
         }
     }
 

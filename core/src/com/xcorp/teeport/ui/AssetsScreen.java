@@ -24,7 +24,7 @@ import java.util.Map.Entry;
 public class AssetsScreen implements Screen, AssetErrorListener {
     private static AssetManager manager;
 
-    private static Map<String, String> sounds = new HashMap<>();
+    private static final Map<String, String> sounds = new HashMap<>();
     private static Map<String, String> textures = new HashMap<>();
     private static Map<String, String> music = new HashMap<>();
 

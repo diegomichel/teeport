@@ -29,7 +29,6 @@ import com.xcorp.teeport.utils.Utils;
 
 public class TileMap {
     private SpriteBatch spriteBatch;
-    private BitmapFont font;
 
     OrthographicCamera cam;
     Vector3 camDirection = new Vector3(1, 1, 0);
@@ -46,10 +45,10 @@ public class TileMap {
 
     public TileMap(int mapname) {
         long startTime, endTime;
-        this.font = new BitmapFont();
+        BitmapFont font = new BitmapFont();
         this.figures = new Array<>();
 
-        this.font.setColor(Color.RED);
+        font.setColor(Color.RED);
 
         this.spriteBatch = new SpriteBatch();
         spriteBatch.setProjectionMatrix(AssetsScreen.camera.combined);

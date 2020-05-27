@@ -25,10 +25,6 @@ class Contacto implements ContactListener {
         Portal.saveHighSpeed(entityA);
         Portal.saveHighSpeed(entityB);
 
-        if (entityA.getEntityType() == EntityType.ET_BOX) {
-            ((Box) entityA.touch).touch(entityA, entityB);
-        }
-
         if (entityA.getEntityType() == EntityType.ET_SHIT && entityA.touch != null) {
             ((Debris) entityA.touch).touch(entityA, entityB);
         }

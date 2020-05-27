@@ -18,7 +18,6 @@ import com.xcorp.teeport.utils.Utils;
 
 public class Portal extends Brain {
     private boolean blue = false;
-    private boolean orange = false;
     static boolean isNextPortalBlue = true;
     float birthDate;
 
@@ -33,8 +32,6 @@ public class Portal extends Brain {
 
     float halfX;
     float halfY;
-    private Vector2 center;
-    private float boxAngle;
 
     private static boolean blocked = false;
 
@@ -63,7 +60,7 @@ public class Portal extends Brain {
             }
         } else {
             this.texture = new Texture(Gdx.files.internal("orangePortal.png"));
-            this.orange = true;
+            boolean orange = true;
             GameScreen.player.portal[1] = this;
             if (GameScreen.player.portal[0] != null) {
                 this.mate = GameScreen.player.portal[0];
@@ -90,7 +87,7 @@ public class Portal extends Brain {
         float angle = this.normal.angle();
         this.angleOffset = (float) (Math.PI * angle / 180);
 
-        center = this.normal.cpy();
+        Vector2 center = this.normal.cpy();
         Utils.vectorInBox2dCoordinates(center);
         /*
          * Move the center of the portal, aka move the portal towards the normal
@@ -102,7 +99,7 @@ public class Portal extends Brain {
                 Settings.PORTAL_HEIGHT / 2);
         Utils.vectorInBox2dCoordinates(half);
 
-        boxAngle = (float) (Math.PI * angle / 180);
+        float boxAngle = (float) (Math.PI * angle / 180);
         shape.setAsBox(half.x, half.y, center, boxAngle);
 
         this.body = GameScreen.world.createBody(bodyDef);

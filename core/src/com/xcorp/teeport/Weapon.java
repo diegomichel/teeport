@@ -21,8 +21,6 @@ public class Weapon implements RayCastCallback {
     private Texture trajectoryPoint;
     private Texture trajectoryPointBlue;
     private Texture trajectoryPointOrange;
-    private Sprite weaponSprite = null;
-    private Sprite ghostPortalSprite = null;
     private Vector2 weaponOffset = new Vector2(32, 32);
     private Player player;
     private boolean canFire = true;
@@ -55,7 +53,7 @@ public class Weapon implements RayCastCallback {
         Vector2 playerPos = this.player.body.getPosition().cpy();
         Utils.vectorInWorldCoordinates(playerPos);
 
-        this.weaponSprite = new Sprite(
+        Sprite weaponSprite = new Sprite(
                 this.weaponTexture);
 
         float angle = GameScreen.player.controller.joystickA.getAngle();
@@ -65,19 +63,19 @@ public class Weapon implements RayCastCallback {
         }
 
         if (angle > 90 && angle <= 180 || angle < -90 && angle >= -180) {
-            this.weaponSprite.setScale(1, -1);
+            weaponSprite.setScale(1, -1);
         }
 
-        this.weaponSprite.setOrigin(this.weaponOffset.x, this.weaponOffset.y);
-        this.weaponSprite.rotate(angle);
-        this.weaponSprite.setPosition(playerPos.x - this.weaponOffset.x,
+        weaponSprite.setOrigin(this.weaponOffset.x, this.weaponOffset.y);
+        weaponSprite.rotate(angle);
+        weaponSprite.setPosition(playerPos.x - this.weaponOffset.x,
                 playerPos.y - this.weaponOffset.y);
 
-        this.weaponSprite.draw(GameScreen.batch);
+        weaponSprite.draw(GameScreen.batch);
     }
 
     private void drawGhostPortal() {
-        this.ghostPortalSprite = new Sprite(
+        Sprite ghostPortalSprite = new Sprite(
                 this.portalRedPrint);
 
         Vector2 p1 = this.player.body.getPosition();
@@ -116,7 +114,7 @@ public class Weapon implements RayCastCallback {
         draw.scl(Settings.BOX_TO_WORLD);
 
         if (Portal.portalFit(this.trEndPos.cpy(), this.trNormal.cpy())) {
-            this.ghostPortalSprite = new Sprite(
+            ghostPortalSprite = new Sprite(
                     this.portalBluePrint);
         }
 
@@ -124,13 +122,13 @@ public class Weapon implements RayCastCallback {
             if (this.player.portal[0].birthDate > this.player.portal[1].birthDate) {
                 if (Portal.hitPortal(this.player.portal[0],
                         this.trEndPos.cpy(), this.trNormal.cpy())) {
-                    this.ghostPortalSprite = new Sprite(
+                    ghostPortalSprite = new Sprite(
                             this.portalRedPrint);
                 }
             } else {
                 if (Portal.hitPortal(this.player.portal[1],
                         this.trEndPos.cpy(), this.trNormal.cpy())) {
-                    this.ghostPortalSprite = new Sprite(
+                    ghostPortalSprite = new Sprite(
                             this.portalRedPrint);
                 }
             }
@@ -139,14 +137,14 @@ public class Weapon implements RayCastCallback {
 
                 if (Portal.hitPortal(this.player.portal[0],
                         this.trEndPos.cpy(), this.trNormal.cpy())) {
-                    this.ghostPortalSprite = new Sprite(
+                    ghostPortalSprite = new Sprite(
                             this.portalRedPrint);
                 }
             }
             if (this.player.portal[1] != null) {
                 if (Portal.hitPortal(this.player.portal[1],
                         this.trEndPos.cpy(), this.trNormal.cpy())) {
-                    this.ghostPortalSprite = new Sprite(
+                    ghostPortalSprite = new Sprite(
                             this.portalRedPrint);
                 }
             }
@@ -154,11 +152,11 @@ public class Weapon implements RayCastCallback {
 
         Utils.vectorInWorldCoordinates(this.trEndPos);
         this.drawTrajectoryFromPlayerToGhost(this.trEndPos);
-        this.trEndPos.y -= this.ghostPortalSprite.getHeight() / 2;
-        this.trEndPos.x -= this.ghostPortalSprite.getWidth() / 2;
-        this.ghostPortalSprite.setPosition(this.trEndPos.x, this.trEndPos.y);
-        this.ghostPortalSprite.rotate(this.trNormal.angle());
-        this.ghostPortalSprite.draw(GameScreen.batch);
+        this.trEndPos.y -= ghostPortalSprite.getHeight() / 2;
+        this.trEndPos.x -= ghostPortalSprite.getWidth() / 2;
+        ghostPortalSprite.setPosition(this.trEndPos.x, this.trEndPos.y);
+        ghostPortalSprite.rotate(this.trNormal.angle());
+        ghostPortalSprite.draw(GameScreen.batch);
     }
 
     private void drawTrajectoryFromPlayerToGhost(Vector2 target) {

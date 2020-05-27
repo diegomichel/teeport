@@ -16,9 +16,6 @@ import com.xcorp.teeport.utils.Utils;
 public class Princess extends Brain {
     private Texture texture;
     private Texture eyesTexture;
-    private BodyDef bodyDef = new BodyDef();
-    private FixtureDef fixtureDef;
-    private CircleShape circleShape;
     private Body body;
     private float lastTouch;
     Entity self;
@@ -27,10 +24,11 @@ public class Princess extends Brain {
         texture = new Texture(Gdx.files.internal("characterFemale.png"));
         eyesTexture = new Texture(Gdx.files.internal("eyesFemale.png"));
 
+        BodyDef bodyDef = new BodyDef();
         bodyDef.type = BodyType.DynamicBody;
-        fixtureDef = new FixtureDef();
+        FixtureDef fixtureDef = new FixtureDef();
 
-        circleShape = new CircleShape();
+        CircleShape circleShape = new CircleShape();
         circleShape.setRadius(Settings.PLAYER_RADIUS * Settings.WORLD_TO_BOX);
 
         fixtureDef.shape = circleShape;

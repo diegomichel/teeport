@@ -19,9 +19,6 @@ public class Joystick {
     private Texture backgroundTexture;
     private Texture cursorTexture;
 
-    private Sprite backgroundSprite;
-    private Sprite cursorSprite;
-
     public int pointer;
     public boolean active;
 
@@ -43,7 +40,7 @@ public class Joystick {
 
         Vector2 center = getProjectedCenter();
 
-        backgroundSprite = new Sprite(this.backgroundTexture);
+        Sprite backgroundSprite = new Sprite(this.backgroundTexture);
         backgroundSprite.setPosition(center.x - backgroundSprite.getWidth() / 2, center.y - backgroundSprite.getHeight() / 2);
         backgroundSprite.draw(GameScreen.batch);
 
@@ -55,7 +52,7 @@ public class Joystick {
         Vector2 limitedCursorPosition = Utils.polar2Rectangular(angle, distance);
         limitedCursorPosition.add(center.x, center.y);
 
-        cursorSprite = new Sprite(this.cursorTexture);
+        Sprite cursorSprite = new Sprite(this.cursorTexture);
         cursorSprite.setPosition(limitedCursorPosition.x - cursorSprite.getWidth() / 2, limitedCursorPosition.y - cursorSprite.getHeight() / 2);
         cursorSprite.draw(GameScreen.batch);
     }

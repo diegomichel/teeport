@@ -18,34 +18,18 @@ import com.xcorp.teeport.utils.Utils;
 
 public class Box extends Brain {
     private Texture texture;
-    private Sound touchSound;
-    private BodyDef bodyDef;
-    private FixtureDef fixtureDef;
-    private PolygonShape polygonShape;
     private Body body;
     private float radius = 32;
-    private Entity ent;
-    private float highSpeed;
-    private long highSpeedTime;
-
-
-    public void touch(Entity ent, Entity other) {
-        if (Utils.distancePP(new Vector2(0, 0), ent.self.getLinearVelocity()) > 15) {
-            this.highSpeed = Utils.distancePP(new Vector2(0, 0), ent.self.getLinearVelocity().cpy());
-            this.highSpeedTime = TimeUtils.nanoTime();
-        }
-    }
 
     public Box(Vector2 position) {
-        touchSound = AssetsScreen.getSound("shitSound");
         texture = AssetsScreen.getTexture("boxTexture");
 
 
-        bodyDef = new BodyDef();
+        BodyDef bodyDef = new BodyDef();
         bodyDef.type = BodyType.DynamicBody;
-        fixtureDef = new FixtureDef();
+        FixtureDef fixtureDef = new FixtureDef();
 
-        polygonShape = new PolygonShape();
+        PolygonShape polygonShape = new PolygonShape();
         this.radius = MathUtils.random(0.5f, 1f) * this.radius;
         polygonShape.setAsBox(radius * Settings.WORLD_TO_BOX, radius * Settings.WORLD_TO_BOX);
 
@@ -71,7 +55,6 @@ public class Box extends Brain {
 
         this.body.setUserData(entity);
 
-        ent = entity;
     }
 
 

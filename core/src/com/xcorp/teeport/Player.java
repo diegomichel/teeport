@@ -26,15 +26,10 @@ import java.util.Iterator;
 
 public class Player extends Brain {
     public float health = Settings.PLAYER_HEALTH;
-    private float radius = Settings.PLAYER_RADIUS;
     public Body body;
     private Texture playerTexture;
     private Texture eyesTexture;
 
-    private BodyDef bodyDef = new BodyDef();
-    private FixtureDef fixtureDef;
-    private PolygonShape polygonShape;
-    private CircleShape circleShape;
     private Fixture footSensorFixture;
 
     static boolean abortShot = false;
@@ -59,8 +54,9 @@ public class Player extends Brain {
         dieSound = AssetsScreen.getSound("dieSound");
         this.spawnPoint = spawnPosition.cpy();
         Utils.vectorInBox2dCoordinates(this.spawnPoint);
+        BodyDef bodyDef = new BodyDef();
         bodyDef.type = BodyType.DynamicBody;
-        fixtureDef = new FixtureDef();
+        FixtureDef fixtureDef = new FixtureDef();
 
         playerTexture = AssetsScreen.getTexture("characterTexture");
         eyesTexture = AssetsScreen.getTexture("characterEyesTexture");
@@ -72,7 +68,8 @@ public class Player extends Brain {
 
         Gdx.input.setInputProcessor(controller);
 
-        circleShape = new CircleShape();
+        CircleShape circleShape = new CircleShape();
+        float radius = Settings.PLAYER_RADIUS;
         circleShape.setRadius(radius * Settings.WORLD_TO_BOX);
 
         fixtureDef.shape = circleShape;
@@ -86,7 +83,7 @@ public class Player extends Brain {
         this.body.createFixture(fixtureDef);
 
         // Foot sensor
-        polygonShape = new PolygonShape();
+        PolygonShape polygonShape = new PolygonShape();
         polygonShape.setAsBox(radius / 2 * Settings.WORLD_TO_BOX, 0.05f, new Vector2(0, -radius * Settings.WORLD_TO_BOX), 0f);
         fixtureDef = new FixtureDef();
         fixtureDef.isSensor = true;
