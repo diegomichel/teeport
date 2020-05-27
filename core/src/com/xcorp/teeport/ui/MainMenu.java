@@ -20,10 +20,10 @@ import com.xcorp.teeport.Teeport;
 public class MainMenu implements Screen {
     private SpriteBatch spriteBatch;
     private Texture background;
-    Teeport game;
-    public Skin skin;
-    public TextureAtlas atlas;
-    public Stage stage;
+    private Teeport game;
+    private Skin skin;
+    private TextureAtlas atlas;
+    private Stage stage;
 
     public MainMenu(Teeport g) {
         this.atlas = new TextureAtlas(Gdx.files.internal("skins/pack.atlas"));

@@ -13,14 +13,14 @@ import com.xcorp.teeport.ui.AssetsScreen;
 import com.xcorp.teeport.utils.Utils;
 
 public class Joystick {
-    public Vector2 center;
+    private Vector2 center;
     public Vector2 cursorPosition;
 
-    Texture backgroundTexture;
-    Texture cursorTexture;
+    private Texture backgroundTexture;
+    private Texture cursorTexture;
 
-    Sprite backgroundSprite;
-    Sprite cursorSprite;
+    private Sprite backgroundSprite;
+    private Sprite cursorSprite;
 
     public int pointer;
     public boolean active;
@@ -64,7 +64,7 @@ public class Joystick {
         return Utils.anglePP(getProjectedCenter(), this.cursorPosition);
     }
 
-    public float getDistance() {
+    private float getDistance() {
         return Utils.distancePP(getProjectedCenter(), this.cursorPosition);
     }
 
@@ -87,7 +87,7 @@ public class Joystick {
         this.center.set(f, g);
     }
 
-    public Vector2 getProjectedCenter() {
+    private Vector2 getProjectedCenter() {
         Vector3 centerPosition = new Vector3(this.center.x, this.center.y, 0);
         AssetsScreen.camera.unproject(centerPosition);
 

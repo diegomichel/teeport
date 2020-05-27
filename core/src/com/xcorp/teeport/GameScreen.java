@@ -19,13 +19,13 @@ import java.util.Iterator;
 public class GameScreen implements Screen {
 
     public static World world;
-    static Array<Entity> entities;
+    private static Array<Entity> entities;
 
     public static SpriteBatch batch;
 
-    Box2DDebugRenderer debugRenderer;
+    private Box2DDebugRenderer debugRenderer;
     static final float WORLD_TO_BOX = 0.01f;
-    static final float BOX_TO_WORLD = 100f;
+    private static final float BOX_TO_WORLD = 100f;
     public static Player player;
     public static Body map;
     public static Particles effects;
@@ -40,7 +40,7 @@ public class GameScreen implements Screen {
         teleportBuffer = new Array<>();
     }
 
-    TileMap tileMap;
+    private TileMap tileMap;
 
     public static Teeport game;
 
@@ -53,7 +53,7 @@ public class GameScreen implements Screen {
         GameScreen.game = g;
     }
 
-    public void create(int map) {
+    private void create(int map) {
         if (map != 11) {
             AssetsScreen.musicManager.play("background1", 0.6f);
         } else {
@@ -64,7 +64,7 @@ public class GameScreen implements Screen {
         GameScreen.world = new World(new Vector2(0, -10), true);
         GameScreen.world.setContactListener(this.contacto);
 
-        GameScreen.entities = new Array<Entity>();
+        GameScreen.entities = new Array<>();
 
         this.debugRenderer = new Box2DDebugRenderer();
 

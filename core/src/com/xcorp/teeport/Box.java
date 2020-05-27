@@ -17,16 +17,16 @@ import com.xcorp.teeport.utils.Utils;
 
 
 public class Box extends Brain {
-    Texture texture;
-    Sound touchSound;
-    BodyDef bodyDef;
-    FixtureDef fixtureDef;
-    PolygonShape polygonShape;
-    Body body;
-    float radius = 32;
-    Entity ent;
-    public float highSpeed;
-    public long highSpeedTime;
+    private Texture texture;
+    private Sound touchSound;
+    private BodyDef bodyDef;
+    private FixtureDef fixtureDef;
+    private PolygonShape polygonShape;
+    private Body body;
+    private float radius = 32;
+    private Entity ent;
+    private float highSpeed;
+    private long highSpeedTime;
 
 
     public void touch(Entity ent, Entity other) {

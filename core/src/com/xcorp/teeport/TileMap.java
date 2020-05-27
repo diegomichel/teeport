@@ -28,21 +28,21 @@ import com.xcorp.teeport.ui.AssetsScreen;
 import com.xcorp.teeport.utils.Utils;
 
 public class TileMap {
-    SpriteBatch spriteBatch;
-    BitmapFont font;
+    private SpriteBatch spriteBatch;
+    private BitmapFont font;
 
     OrthographicCamera cam;
     Vector3 camDirection = new Vector3(1, 1, 0);
     Vector2 maxCamPosition = new Vector2(0, 0);
 
-    TiledMapRenderer tileMapRenderer;
+    private TiledMapRenderer tileMapRenderer;
     public static TiledMap map;
     AtlasTmxMapLoader atlas;
 
     long startTime = System.nanoTime();
     Vector3 tmp = new Vector3();
 
-    public Array<MapFigure> figures;
+    private Array<MapFigure> figures;
 
     public TileMap(int mapname) {
         long startTime, endTime;
@@ -95,7 +95,7 @@ public class TileMap {
 
     // Well this method looks superficial, maybe i should create the bodies
     // here, instead of the other place.
-    public void createFigureFromObject(MapObject object) {
+    private void createFigureFromObject(MapObject object) {
         MapFigure figure = new MapFigure();
         Vector2 objectPosition;
 
@@ -212,7 +212,7 @@ public class TileMap {
         this.spriteBatch.end();
     }
 
-    public void spawnEntities() {
+    private void spawnEntities() {
         PolygonShape polygonShape;
         ChainShape chainShape;
         Body body;

@@ -16,10 +16,10 @@ import com.xcorp.teeport.Teeport;
 public class EndScreen implements Screen {
     private SpriteBatch spriteBatch;
     private Texture splsh;
-    Teeport game;
-    int touchs;
-    public static OrthographicCamera camera;
-    Particles particles;
+    private Teeport game;
+    private int touchs;
+    private static OrthographicCamera camera;
+    private Particles particles;
 
     int time, teleports, spawns;
 

@@ -8,10 +8,10 @@ import com.badlogic.gdx.physics.box2d.Manifold;
 import com.xcorp.teeport.Effects.Debris;
 
 
-public class Contacto implements ContactListener {
+class Contacto implements ContactListener {
 
-    Entity entityA = null;
-    Entity entityB = null;
+    private Entity entityA = null;
+    private Entity entityB = null;
 
     @Override
     public void beginContact(Contact contact) {

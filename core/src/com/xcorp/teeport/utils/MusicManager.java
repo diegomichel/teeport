@@ -4,8 +4,8 @@ import com.badlogic.gdx.audio.Music;
 import com.xcorp.teeport.ui.AssetsScreen;
 
 public class MusicManager {
-    Music music;
-    String songPlaying;
+    private Music music;
+    private String songPlaying;
 
     public void play(String song) {
         if (song.equals(songPlaying)) {
@@ -28,7 +28,7 @@ public class MusicManager {
         music.setVolume(volume);
     }
 
-    public void stop() {
+    private void stop() {
         if (music != null)
             music.stop();
     }

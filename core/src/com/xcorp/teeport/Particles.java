@@ -10,18 +10,18 @@ import com.badlogic.gdx.utils.Array;
 import com.xcorp.teeport.ui.AssetsScreen;
 
 public class Particles {
-    ParticleEffect effect = new ParticleEffect();
-    ParticleEffect muzzleEffect = new ParticleEffect();
+    private ParticleEffect effect = new ParticleEffect();
+    private ParticleEffect muzzleEffect = new ParticleEffect();
 
     public static ParticleEffect noPortalEffect = new ParticleEffect();
     public static Array<ParticleEmitter> noPortalEmitters;
 
 
-    Array<ParticleEmitter> emitters;
-    SpriteBatch spriteBatch;
-    float fpsCounter;
-    int emitterIndex;
-    int particleCount = 10;
+    private Array<ParticleEmitter> emitters;
+    private SpriteBatch spriteBatch;
+    private float fpsCounter;
+    private int emitterIndex;
+    private int particleCount = 10;
 
 
     public Particles(String file) {
@@ -34,10 +34,10 @@ public class Particles {
         this.effect.getEmitters().add(this.emitters.get(1));
 
 
-        this.noPortalEffect.load(Gdx.files.internal("data/noportal.p"), Gdx.files.internal("data/"));
-        this.noPortalEffect.setPosition(AssetsScreen.camera.viewportWidth / 2, AssetsScreen.camera.viewportHeight / 2);
-        this.noPortalEmitters = new Array<>(this.noPortalEffect.getEmitters());
-        this.noPortalEffect.getEmitters().clear();
+        noPortalEffect.load(Gdx.files.internal("data/noportal.p"), Gdx.files.internal("data/"));
+        noPortalEffect.setPosition(AssetsScreen.camera.viewportWidth / 2, AssetsScreen.camera.viewportHeight / 2);
+        noPortalEmitters = new Array<>(noPortalEffect.getEmitters());
+        noPortalEffect.getEmitters().clear();
         //  this.noPortalEffect.getEmitters().add(this.noPortalEmitters.get(0));
 
 
@@ -95,9 +95,9 @@ public class Particles {
     }
 
     public void noPortal(Vector2 position) {
-        this.noPortalEffect.setPosition(position.x, position.y);
+        noPortalEffect.setPosition(position.x, position.y);
         float delta = Gdx.graphics.getDeltaTime();
-        this.noPortalEffect.draw(GameScreen.batch, delta);
+        noPortalEffect.draw(GameScreen.batch, delta);
     }
 
 }

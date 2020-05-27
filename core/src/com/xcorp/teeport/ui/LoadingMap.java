@@ -16,9 +16,11 @@ import com.xcorp.teeport.Weapon;
 public class LoadingMap implements Screen {
     private SpriteBatch spriteBatch;
     private Texture splsh;
-    Teeport game;
+    private Teeport game;
 
-    int time, teleports, spawns;
+    private int time;
+    private int teleports;
+    private int spawns;
 
     public LoadingMap(Teeport g) {
         this.game = g;

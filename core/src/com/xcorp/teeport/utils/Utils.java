@@ -84,7 +84,7 @@ public class Utils {
      *
      * @return the mouse in fixed world coordinates
      */
-    public static Vector2 getMouseInFixedWorldCoordinates() {
+    private static Vector2 getMouseInFixedWorldCoordinates() {
         return new Vector2(Controls.lastMouseX, Controls.lastMouseY);
     }
 

@@ -3,16 +3,16 @@ package com.xcorp.teeport;
 import com.badlogic.gdx.physics.box2d.Body;
 
 public class Entity {
-    public int ID;
-    public int numFootContacts = 0;
+    private int ID;
+    private int numFootContacts = 0;
     public boolean noclip = false;
     public EntityType entityType = EntityType.ET_NONE;
-    public boolean die = false;
-    public Body owner = null;
+    private boolean die = false;
+    private Body owner = null;
     public Body self = null;
     public boolean inLove = false;
 
-    Portal portal;
+    private Portal portal;
     float teleportTime;
 
     float highSpeed;

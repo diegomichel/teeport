@@ -22,23 +22,23 @@ import java.util.Map;
 import java.util.Map.Entry;
 
 public class AssetsScreen implements Screen, AssetErrorListener {
-    public static AssetManager manager;
+    private static AssetManager manager;
 
-    public static Map<String, String> sounds = new HashMap<>();
-    public static Map<String, String> textures = new HashMap<>();
-    public static Map<String, String> music = new HashMap<>();
+    private static Map<String, String> sounds = new HashMap<>();
+    private static Map<String, String> textures = new HashMap<>();
+    private static Map<String, String> music = new HashMap<>();
 
-    static Sound defaultSound;
-    static Texture defaultTexture;
+    private static Sound defaultSound;
+    private static Texture defaultTexture;
 
-    Teeport game;
+    private Teeport game;
 
     public static BitmapFont font16;
     public static BitmapFont font32;
     public static BitmapFont font64;
     public static SpriteBatch batch;
 
-    public static Texture splash;
+    private static Texture splash;
 
     public static MusicManager musicManager;
     public static OrthographicCamera camera;
@@ -100,7 +100,7 @@ public class AssetsScreen implements Screen, AssetErrorListener {
         load();
     }
 
-    public void load() {
+    private void load() {
         for (Entry<String, String> e : sounds.entrySet()) {
             manager.load(e.getValue(), Sound.class);
         }

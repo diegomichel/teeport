@@ -13,19 +13,19 @@ import com.badlogic.gdx.physics.box2d.BodyDef.BodyType;
 import com.xcorp.teeport.utils.Utils;
 
 public class MapFigure extends Brain {
-    BodyType type;
+    private BodyType type;
     String name;
-    ShapeForm shapeForm;
-    float density;
-    float friction = 1.0f;
-    float restitution;
-    Vector2 pos;
-    Vector2 size;
+    private ShapeForm shapeForm;
+    private float density;
+    private float friction = 1.0f;
+    private float restitution;
+    private Vector2 pos;
+    private Vector2 size;
     EntityType entityType;
-    Body body;
+    private Body body;
 
-    Texture texture = null;
-    Sprite sprite = null;
+    private Texture texture = null;
+    private Sprite sprite = null;
 
     Vector2[] vertices;
 

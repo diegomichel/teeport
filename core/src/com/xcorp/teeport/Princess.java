@@ -14,13 +14,13 @@ import com.xcorp.teeport.ui.AssetsScreen;
 import com.xcorp.teeport.utils.Utils;
 
 public class Princess extends Brain {
-    Texture texture;
-    Texture eyesTexture;
-    BodyDef bodyDef = new BodyDef();
-    FixtureDef fixtureDef;
-    CircleShape circleShape;
-    Body body;
-    float lastTouch;
+    private Texture texture;
+    private Texture eyesTexture;
+    private BodyDef bodyDef = new BodyDef();
+    private FixtureDef fixtureDef;
+    private CircleShape circleShape;
+    private Body body;
+    private float lastTouch;
     Entity self;
 
     public Princess(Vector2 position) {
@@ -87,7 +87,7 @@ public class Princess extends Brain {
         }
     }
 
-    public void drawEyes() {
+    private void drawEyes() {
         Vector2 mouse = GameScreen.player.body.getPosition();
         Vector2 playerPos = this.body.getPosition().cpy();
         Utils.vectorInWorldCoordinates(playerPos);

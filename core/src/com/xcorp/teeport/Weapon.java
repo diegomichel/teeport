@@ -15,20 +15,20 @@ public class Weapon implements RayCastCallback {
     public static Entity target;
     public static int shots;
     public Vector2 aimTarget;
-    Texture weaponTexture;
-    Texture portalBluePrint;
-    Texture portalRedPrint;
-    Texture trajectoryPoint;
-    Texture trajectoryPointBlue;
-    Texture trajectoryPointOrange;
-    Sprite weaponSprite = null;
-    Sprite ghostPortalSprite = null;
-    Vector2 weaponOffset = new Vector2(32, 32);
-    Player player;
-    boolean canFire = true;
-    RC_Check rayCastOption;
-    Vector2 trEndPos = null;
-    Vector2 trNormal = null;
+    private Texture weaponTexture;
+    private Texture portalBluePrint;
+    private Texture portalRedPrint;
+    private Texture trajectoryPoint;
+    private Texture trajectoryPointBlue;
+    private Texture trajectoryPointOrange;
+    private Sprite weaponSprite = null;
+    private Sprite ghostPortalSprite = null;
+    private Vector2 weaponOffset = new Vector2(32, 32);
+    private Player player;
+    private boolean canFire = true;
+    private RC_Check rayCastOption;
+    private Vector2 trEndPos = null;
+    private Vector2 trNormal = null;
     private long lastShotTime;
     private float fireRate;
     public Weapon(float fireRate, Player player) {
@@ -161,7 +161,7 @@ public class Weapon implements RayCastCallback {
         this.ghostPortalSprite.draw(GameScreen.batch);
     }
 
-    public void drawTrajectoryFromPlayerToGhost(Vector2 target) {
+    private void drawTrajectoryFromPlayerToGhost(Vector2 target) {
         int trajectoryPoints = 100;
         Vector2 playerPosition = GameScreen.player.body.getPosition().cpy();
         Utils.vectorInWorldCoordinates(playerPosition);

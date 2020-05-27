@@ -26,30 +26,30 @@ import java.util.Iterator;
 
 public class Player extends Brain {
     public float health = Settings.PLAYER_HEALTH;
-    public float radius = Settings.PLAYER_RADIUS;
+    private float radius = Settings.PLAYER_RADIUS;
     public Body body;
-    Texture playerTexture;
-    Texture eyesTexture;
+    private Texture playerTexture;
+    private Texture eyesTexture;
 
-    BodyDef bodyDef = new BodyDef();
-    FixtureDef fixtureDef;
-    PolygonShape polygonShape;
-    CircleShape circleShape;
-    Fixture footSensorFixture;
+    private BodyDef bodyDef = new BodyDef();
+    private FixtureDef fixtureDef;
+    private PolygonShape polygonShape;
+    private CircleShape circleShape;
+    private Fixture footSensorFixture;
 
     static boolean abortShot = false;
 
     public Weapon weapon;
-    Vector2 spawnPoint;
+    private Vector2 spawnPoint;
 
     Portal[] portal = new Portal[2];
 
     Controls controller;
 
-    Array<Entity> contacts;
+    private Array<Entity> contacts;
 
-    Sound jumpSound;
-    Sound dieSound;
+    private Sound jumpSound;
+    private Sound dieSound;
     static boolean dead;
     private long deadTime;
     public static int teleportations;
@@ -151,7 +151,7 @@ public class Player extends Brain {
         this.body.applyForceToCenter(impulse, true);
     }
 
-    public boolean playerTouchingGround() {
+    private boolean playerTouchingGround() {
         Entity footData = (Entity) footSensorFixture.getBody().getUserData();
 
         if (footData != null) {
@@ -177,7 +177,7 @@ public class Player extends Brain {
         this.drawEyes();
     }
 
-    public void drawEyes() {
+    private void drawEyes() {
         Vector2 playerPos = GameScreen.player.body.getPosition().cpy();
         Utils.vectorInWorldCoordinates(playerPos);
 

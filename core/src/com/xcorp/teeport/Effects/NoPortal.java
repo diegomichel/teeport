@@ -20,17 +20,17 @@ import com.xcorp.teeport.ui.AssetsScreen;
 
 
 public class NoPortal extends Brain {
-    Texture texture;
-    Sound touchSound;
-    BodyDef bodyDef;
-    FixtureDef fixtureDef;
-    CircleShape circleShape;
-    Body body;
-    float radius = 16;
-    float radiusFactor;
-    long lifeTime;
-    long spawnTime;
-    Entity ent;
+    private Texture texture;
+    private Sound touchSound;
+    private BodyDef bodyDef;
+    private FixtureDef fixtureDef;
+    private CircleShape circleShape;
+    private Body body;
+    private float radius = 16;
+    private float radiusFactor;
+    private long lifeTime;
+    private long spawnTime;
+    private Entity ent;
 
     public NoPortal(Vector2 position) {
         touchSound = AssetsScreen.getSound("shitSound");

@@ -18,7 +18,7 @@ public class Controls implements InputProcessor {
     public static float lastMouseY = 0;
 
     public static boolean useJoystickToAim = false;
-    public static boolean dragged = false;
+    private static boolean dragged = false;
     public static Vector2 target;
 
     public Joystick joystickA;

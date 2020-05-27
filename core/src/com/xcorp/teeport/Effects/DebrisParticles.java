@@ -12,13 +12,13 @@ import com.xcorp.teeport.EntityType;
 import com.xcorp.teeport.GameScreen;
 
 public class DebrisParticles extends Brain {
-    BodyDef bodyDef;
-    Body body;
-    Entity ent;
+    private BodyDef bodyDef;
+    private Body body;
+    private Entity ent;
 
-    int count = 0;
-    int maxCount = 10;
-    long time;
+    private int count = 0;
+    private int maxCount = 10;
+    private long time;
 
     public DebrisParticles(Vector2 position) {
         bodyDef = new BodyDef();

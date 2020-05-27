@@ -11,7 +11,7 @@ public class Teeport extends Game implements Screen {
     public GameScreen gameScreen;
     public MainMenu mainMenu;
     public Screen loadingMap;
-    public AssetsScreen assetsScreen;
+    private AssetsScreen assetsScreen;
     public Screen endScreen;
 
     @Override

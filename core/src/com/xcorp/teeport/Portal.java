@@ -16,35 +16,33 @@ import com.badlogic.gdx.utils.TimeUtils;
 import com.xcorp.teeport.ui.AssetsScreen;
 import com.xcorp.teeport.utils.Utils;
 
-import java.util.Iterator;
-
 public class Portal extends Brain {
-    boolean blue = false;
-    boolean orange = false;
+    private boolean blue = false;
+    private boolean orange = false;
     static boolean isNextPortalBlue = true;
     float birthDate;
 
-    Vector2 spritePosition;
-    Vector2 positionBox2d;
-    Vector2 normal;
+    private Vector2 spritePosition;
+    private Vector2 positionBox2d;
+    private Vector2 normal;
 
-    Sprite portalSprite;
+    private Sprite portalSprite;
 
-    Body body;
-    float angleOffset;
+    private Body body;
+    private float angleOffset;
 
     float halfX;
     float halfY;
-    Vector2 center;
-    float boxAngle;
+    private Vector2 center;
+    private float boxAngle;
 
-    static boolean blocked = false;
+    private static boolean blocked = false;
 
-    Texture texture;
-    Portal mate = null;
+    private Texture texture;
+    private Portal mate = null;
 
-    Sound teleportSound;
-    Sound portalSpawnSound;
+    private Sound teleportSound;
+    private Sound portalSpawnSound;
 
     public Portal(Vector2 position, Vector2 normal) {
         this.birthDate = TimeUtils.nanoTime();
@@ -159,27 +157,26 @@ public class Portal extends Brain {
 
         for (Entity entity : GameScreen.teleportBuffer) {
             teleportSound.stop();
-            Entity ent = entity;
             Vector2 bodyNextPosition = mate.body.getPosition().cpy();
             Vector2 bodyOffsetFromPortal = mate.normal.cpy();
             bodyOffsetFromPortal.scl(Settings.MAX_OBJECT_SIZE_TO_TELEPORT
                     * Settings.WORLD_TO_BOX);
             bodyNextPosition.add(bodyOffsetFromPortal);
-            float speed = Utils.distancePP(new Vector2(0, 0), ent.self
+            float speed = Utils.distancePP(new Vector2(0, 0), entity.self
                     .getLinearVelocity().cpy());
 
-            if (ent.highSpeedTime > (TimeUtils.nanoTime() - 100000000)) {
-                if (ent.highSpeed > speed) {
-                    speed = ent.highSpeed;
+            if (entity.highSpeedTime > (TimeUtils.nanoTime() - 100000000)) {
+                if (entity.highSpeed > speed) {
+                    speed = entity.highSpeed;
                 }
             }
             Vector2 bodyVelocity = new Vector2(mate.normal.cpy().x * speed,
                     mate.normal.cpy().y * speed);
-            ent.self.setTransform(bodyNextPosition, 0);
-            ent.self.setLinearVelocity(bodyVelocity);
-            ent.self.setAwake(true);
-            ent.highSpeed = 0;
-            ent.highSpeedTime = 0;
+            entity.self.setTransform(bodyNextPosition, 0);
+            entity.self.setLinearVelocity(bodyVelocity);
+            entity.self.setAwake(true);
+            entity.highSpeed = 0;
+            entity.highSpeedTime = 0;
             teleportSound.play(1 / bodyVelocity.len() * 5);
             Player.teleportations += 1;
         }
@@ -307,7 +304,7 @@ public class Portal extends Brain {
         portalSpawnSound.play();
     }
 
-    public Vector2 getPortalRayCastCenter() {
+    private Vector2 getPortalRayCastCenter() {
         Vector2 rayCastCenter = this.body.getPosition().cpy();
         Vector2 normal = this.normal.cpy();
         normal.scl(10);
@@ -318,15 +315,15 @@ public class Portal extends Brain {
 
     }
 
-    public Vector2 getPortalRayCastPointA() {
+    private Vector2 getPortalRayCastPointA() {
         return getPortalRayCastPointFromCenter(-90);
     }
 
-    public Vector2 getPortalRayCastPointB() {
+    private Vector2 getPortalRayCastPointB() {
         return getPortalRayCastPointFromCenter(90);
     }
 
-    public Vector2 getPortalRayCastPointFromCenter(float degrees) {
+    private Vector2 getPortalRayCastPointFromCenter(float degrees) {
         float angleDown = this.normal.angle()
                 + degrees;
         Vector2 point = Utils.polar2Rectangular(angleDown,
