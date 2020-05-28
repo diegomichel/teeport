@@ -186,7 +186,7 @@ public class Portal extends Brain {
 
         Portal.blocked = false;
 
-        if (Weapon.target.entityType == EntityType.ET_WALL_NOPORTAL) return Portal.blocked;
+        if (Weapon.target.entityType == EntityType.ET_WALL_NOPORTAL) return false;
 
         Vector2 center;
         Vector2 pointA;

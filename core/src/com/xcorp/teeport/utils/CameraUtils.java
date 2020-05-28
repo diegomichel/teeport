@@ -21,9 +21,8 @@ public class CameraUtils {
         float cameraMaxY = Float.parseFloat(TileMap.map.getProperties().get("height").toString()) * Float.parseFloat(TileMap.map.getProperties().get("tileheight").toString())
                 - cameraHalfHeight;
 
-        if (player.y > camera.position.y - camera.viewportHeight / 2
-                && player.y < camera.position.y + camera.viewportHeight / 2) {
-        } else {
+        if (!(player.y > camera.position.y - camera.viewportHeight / 2
+                && player.y < camera.position.y + camera.viewportHeight / 2)) {
             if (player.y < camera.position.y && camera.position.y > cameraHalfHeight
                     || player.y > camera.position.y
                     && camera.position.y < cameraMaxY) {

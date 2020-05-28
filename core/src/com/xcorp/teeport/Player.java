@@ -233,10 +233,7 @@ public class Player extends Brain {
             if (other.entityType == EntityType.ET_SPIKES) {
                 this.die();
             }
-            if (other.entityType == EntityType.ET_PRINCESS) {
-
-                //this.loadNextLevel();
-            }
+            //this.loadNextLevel();
 
             ContactIterator.remove();
         }

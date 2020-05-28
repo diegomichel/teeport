@@ -170,9 +170,7 @@ public class TileMap {
                 entity.draw = figure;
                 figure.setBody(body);
                 body.setUserData(entity);
-                if (polygonShape != null) {
-                    polygonShape.dispose();
-                }
+                polygonShape.dispose();
                 return;
             default:
                 Messages.warning(this, "Object name: " + object.getName() + " unrecognized, check your map objects");
