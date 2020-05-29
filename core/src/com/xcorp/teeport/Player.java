@@ -169,7 +169,7 @@ public class Player extends Brain {
         Utils.vectorInWorldCoordinates(playerPos);
 
         Sprite playerSprite = new Sprite(playerTexture);
-        playerSprite.setPosition(playerPos.x - playerTexture.getWidth() / 2, playerPos.y - playerTexture.getHeight() / 2);
+        playerSprite.setPosition(playerPos.x - playerTexture.getWidth() / 2.0f, playerPos.y - playerTexture.getHeight() / 2.0f);
         playerSprite.draw(GameScreen.batch);
         this.drawEyes();
     }
@@ -186,7 +186,7 @@ public class Player extends Brain {
 
         Vector2 direction = Utils.polar2Rectangular(angle, 10);
 
-        eyesSprite.setPosition(playerPos.x - (eyesTexture.getWidth() / 2) + direction.x, playerPos.y - (eyesTexture.getHeight() / 2) + direction.y);
+        eyesSprite.setPosition(playerPos.x - (eyesTexture.getWidth() / 2.0f) + direction.x, playerPos.y - (eyesTexture.getHeight() / 2.0f) + direction.y);
 
         eyesSprite.draw(GameScreen.batch);
 

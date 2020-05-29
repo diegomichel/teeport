@@ -40,7 +40,7 @@ public class MainMenu implements Screen {
         stage.addActor(subTable);
         table.setFillParent(true);
 
-        table.setSize(Settings.SCREEN_WIDTH / 2, Settings.SCREEN_HEIGHT);
+        table.setSize(Settings.SCREEN_WIDTH / 2.0f, Settings.SCREEN_HEIGHT);
         table.padRight(10).padTop(10);
         table.row();
 

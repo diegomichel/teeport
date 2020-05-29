@@ -138,7 +138,7 @@ public class AssetsScreen implements Screen, AssetErrorListener {
         // display loading information
         batch.begin();
         batch.draw(splash, 0, 0);
-        font16.draw(batch, "Loading: " + manager.getProgress() * 100, -230 + Settings.SCREEN_WIDTH / 2, -50 + Settings.SCREEN_HEIGHT / 2);
+        font16.draw(batch, "Loading: " + manager.getProgress() * 100, -230 + Settings.SCREEN_WIDTH / 2.0f, -50 + Settings.SCREEN_HEIGHT / 2.0f);
         batch.end();
 
     }
