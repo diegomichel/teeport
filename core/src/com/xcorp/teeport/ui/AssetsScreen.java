@@ -25,13 +25,13 @@ public class AssetsScreen implements Screen, AssetErrorListener {
     private static AssetManager manager;
 
     private static final Map<String, String> sounds = new HashMap<>();
-    private static Map<String, String> textures = new HashMap<>();
-    private static Map<String, String> music = new HashMap<>();
+    private static final Map<String, String> textures = new HashMap<>();
+    private static final Map<String, String> music = new HashMap<>();
 
     private static Sound defaultSound;
     private static Texture defaultTexture;
 
-    private Teeport game;
+    private final Teeport game;
 
     public static BitmapFont font16;
     public static BitmapFont font32;
@@ -112,10 +112,6 @@ public class AssetsScreen implements Screen, AssetErrorListener {
         for (Entry<String, String> e : music.entrySet()) {
             manager.load(e.getValue(), Music.class);
         }
-
-    }
-
-    public void unload() {
 
     }
 

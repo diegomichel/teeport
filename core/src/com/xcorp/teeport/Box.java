@@ -68,6 +68,4 @@ public class Box extends Brain {
         shitSprite.draw(GameScreen.batch);
     }
 
-    public void think() {
-    }
 }
